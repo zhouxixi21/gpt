@@ -1,0 +1,141 @@
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .user-list{
+    width: 300px;
+    background: #11161b;
+    border-right: 1px solid #303030;
+    overflow: auto;
+    .bot-item{
+      cursor: pointer;
+      &.selected{
+        background: #3b3b3b78;
+        cursor: auto;
+      }
+      height: 76px;
+      padding: 16px;
+      display: flex;
+      border-bottom: 1px solid #303030;
+      .bot-item-container{
+        display: flex;
+        img{
+          width: 36px;
+          height: 36px;
+          margin-right: 8px;
+        }
+        .bot-item-content{
+          padding: 0 26px;
+          width: 230px;
+          display: grid;
+          span{
+            width: 200px;
+
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          
+        }
+      }
+     
+      
+    }
+  }
+  .conversation-container{
+    width: calc(100% - 300px);
+    overflow: hidden;
+    .conversation-title{
+      height: 60px;
+      padding: 4px 16px;
+      width: 100%;
+      background: #171616b5;
+      display: flex;
+      justify-content: space-between;
+      .conversation-title-content{
+        display: flex;
+        img{
+          width: 37px;
+        }
+        .title{
+          font-size: 22px;
+          margin: 0 16px;
+          padding-top: 12px;
+          font-weight: bolder;
+          
+        }
+        .status{
+          padding-top: 26px;
+        }
+      }
+      .conversation-title-operation{
+        padding-top: 10px;
+
+      }
+    }
+    .conversation-content{
+      padding: 32px 64px;
+      height: calc(100% - 143px);
+      margin-bottom: 20px;
+      overflow: auto;
+      .conversation-item{
+        width: 100%;
+        margin-bottom: 16px;
+        .conversation-item-container{
+          display: flex;
+
+        }
+        .conversation-item-logo{
+          width: 50px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          img{
+            width: 24px;
+            height: 24px;
+          }
+        }
+        .conversation-item-content{
+          width: auto;
+          max-width: calc(100% - 50px);
+          padding: 10px 20px;
+          display: flex;
+          align-items: flex-start;
+          background: #202932;
+          border-radius: 6px;
+          .conversation-item-content-task-list {
+            .conversation-item-content-task-item {
+              padding: 8px;
+              border-radius: 12px;
+    
+              &.select {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+    
+                background: #17202a;
+                color: white;
+    
+              }
+            }
+    
+          }
+          .conversation-item-content-task-detail {
+            background: #17202a !important;
+            color: white;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+            padding: 16px 32px;
+            height: 100%;
+            width: 78%;
+          }
+        }
+      }
+    }
+    .answer-question{
+      width: 100%;
+      padding: 0 64px 32px 64px;
+    
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+/* You can add global styles to this file, and also import other style files */
+.page-container{
+  width: 100%;
+  height: 100%;
+  padding: 30px 48px;
+  .ant-breadcrumb{
+    color: #929090 !important;
+  }
+  .ant-breadcrumb-separator{
+    color: #929090 !important;
+  }
+  .final{
+    color: white !important;
+  }
+  .content{
+    width: 100%;
+    height: calc(100% - 48px);
+    margin-top: 26px;
+    display: flex;
+    background: #17202a;
+    flex-wrap: wrap;
+    .header{
+      width: 100%;
+      height: 60px;
+      padding: 0 16px ;
+      border-bottom: 1px solid #4b4a4a;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      .title{
+        font-size: 18px;
+        color: white;
+        
+      }
+      .header-action{
+        display: flex;
+      }
+    }
+    .content-container{
+      width: 100%;
+      padding: 16px;
+      height: calc(100% - 60px);
+      overflow: auto;
+    }
+  }
+}
+
+.description-container{
+  .description{
+    font-size: 10px;
+    margin-top: 8px;
+  }
+
+}
+.ant-steps-item-title{
+  height: 48px;
+  font-size: 12px !important;
+  line-height: 14px;
+}
+.ant-modal-content{
+  background-color: #17202a !important;
+  color: white;
+}
+.ant-modal-header {
+  background-color: #17202a !important;
+
+}
+.ant-modal{
+  width: 1000px !important;
+}
+.pointer{
+  cursor: pointer;
+}
