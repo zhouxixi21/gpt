@@ -39,7 +39,8 @@ export interface IQUESTION{
   task?: Array<ISHOWTASK>;
 }
 export interface ISHOWQUESTION extends IQUESTION{
-  selectedTask?: ISHOWTASK
+  selectedTask?: ISHOWTASK,
+  selectIndex?: number
 }
 export interface ITASK{
   name: string;
@@ -47,8 +48,12 @@ export interface ITASK{
   status: string;
   startTime?: string;
   finishTime?: string;
-  response?: string;
+  input?: string;
+  output?: string;
+  summary?: string;
   children?: Array<ISHOWTASK>;
+  description: '';
+  type: string
 }
 export interface ISHOWTASK extends ITASK{
   selected?: boolean;

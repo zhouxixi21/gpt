@@ -173,11 +173,15 @@ export class GPTService {
               id: '2-1-1',
               name: 'Check the code',
               status: 'In Progress',
-              startTime: '2024/04/04 15:00:00'
+              startTime: '2024/04/04 15:00:00',
+              description: '',
+              type: 'step'
             },{
               id: '2-1-2',
               name: 'Change the code',
-              status: 'Waiting'
+              status: 'Waiting',
+              description: '',
+              type: 'step'
             }]
           }
         ]);
@@ -198,21 +202,27 @@ export class GPTService {
               status: 'Finished',
               startTime: '2024/04/04 15:00:00',
               finishTime: '2024/04/04 15:30:00',
-              response: 'Need to change version of spring framework to 5.3.28.',
+              output: 'Need to change version of spring framework to 5.3.28.',
+              description: '',
+              type: 'step',
               children: [{
                 id: '3-1-1-1',
                 name: 'Get Report from Blackduck website',
                 status: 'Finished',
                 startTime: '2024/04/04 15:30:00',
                 finishTime: '2024/04/04 15:35:00',
-                response: 'XXX has issue Spring framework version is 5.3.20.'
+                output: 'XXX has issue Spring framework version is 5.3.20.',
+                description: '',
+                type: 'step'
               },{
                 id: '3-1-1-2',
                 name: 'Analyze the correct version of Spring framework',
                 status: 'Finished',
                 startTime: '2024/04/04 15:35:00',
                 finishTime: '2024/04/04 15:50:00',
-                response: 'Spring framework correct version is 5.3.28.'
+                output: 'Spring framework correct version is 5.3.28.',
+                description: '',
+                type: 'step'
               }]
             }]
           }
@@ -233,20 +243,26 @@ export class GPTService {
               name: 'Change the code',
               status: 'Finished',
               startTime: '2024/04/04 15:30:00',
-              response: '',
+              output: '',
+              description: '',
+              type: 'step',
               children: [{
                 id: '3-3-1-1',
                 name: 'Download the code',
                 status: 'Finished',
                 startTime: '2024/04/04 15:30:00',
                 finishTime: '2024/04/04 15:35:00',
-                response: 'Has downloaded the code.'
+                output: 'Has downloaded the code.',
+                description: '',
+                type: 'step'
               },{
                 id: '3-3-1-2',
                 name: 'Change the code',
                 status: 'In Progress',
                 startTime: '2024/04/04 15:35:00',
-                response: ''
+                output: '',
+                description: '',
+                type: 'step'
               }]
             }]
           }

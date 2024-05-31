@@ -14,6 +14,7 @@ import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { TaskComponent } from 'src/app/component/task/task.component';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { TaskComponent } from 'src/app/component/task/task.component';
     FormsModule,
     NzIconModule,
     NzCollapseModule,
+    NzDividerModule,
     NzStepsModule,
     NzModalModule,
     NzInputModule,

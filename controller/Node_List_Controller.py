@@ -9,8 +9,6 @@ node_controller = Blueprint('node_controller', __name__)
 @node_controller.route('/list', methods=['GET'])
 def get_node_list():
     node_list = [
-        {"id": 1, "name": "Bot 1", "status": "Online", "lastMessage": ""},
-        {"id": 2, "name": "Bot 2", "status": "Online", "lastMessage": ""},
         {"id": 3, "name": "Bot 3", "status": "Online", "lastMessage": ""},
     ]
     for node_item in node_list:

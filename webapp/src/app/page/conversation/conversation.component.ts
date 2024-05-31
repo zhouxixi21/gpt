@@ -12,6 +12,7 @@ import { GPTService } from 'src/app/service/gpt.service';
 export class ConversationComponent implements OnInit{
   userList: Array<ISHOWROBOT> = []
   conversationList: Array<ISHOWQUESTION> = []
+  collapseMenu = false
   answer = ''
   refreshEvent:any = {}
   selectedUser: ISHOWROBOT = {
@@ -22,6 +23,9 @@ export class ConversationComponent implements OnInit{
   }
   ngOnInit(): void {
     this.initData(0)
+  }
+  changeCollapseMenu(){
+    this.collapseMenu = !this.collapseMenu
   }
   constructor(private gptService: GPTService, private message: NzMessageService) { }
   initData(selectIndex:number){
@@ -56,14 +60,14 @@ export class ConversationComponent implements OnInit{
   formatConversation(conversationListInput:Array<ISHOWQUESTION>){
     for(let i = 0; i < conversationListInput.length; i++){
       let task = conversationListInput[i].task
-      if(task && !(task.length == 1 &&(!task[0].children || task[0].children.length == 0) && task[0].name == '' && task[0].response != '')){
+      if(task && !(task.length == 1 &&(!task[0].children || task[0].children.length == 0) && task[0].name == '' && task[0].output != '')){
         let hasInprogress = false
         for(let j = 0; j < task.length; j++){
           if(task[j].status == 'In Progress'){
             task[j].selected = true;
             hasInprogress = true
             conversationListInput[i].selectedTask = task[j]; 
-
+            conversationListInput[i].selectIndex = j + 1
           } else {
             task[j].selected = false;
           }
@@ -72,7 +76,9 @@ export class ConversationComponent implements OnInit{
           console.log(task)
           if(task.length > 0){
             task[0].selected = true;
-            conversationListInput[i].selectedTask = task[0]; 
+            conversationListInput[i].selectedTask = task[0];
+            conversationListInput[i].selectIndex = 1; 
+
           }
           
 
@@ -80,13 +86,13 @@ export class ConversationComponent implements OnInit{
       }
     }
   }
-  selectTask(task: ISHOWTASK,question: ISHOWQUESTION){
+  selectTask(task: ISHOWTASK,question: ISHOWQUESTION, index: number){
     if(task.selected || task.status == 'Waiting'){
       return
     }
     question.selectedTask = task
-    
-    question.task?.forEach(taskItem=>{
+    question.selectIndex = index + 1
+    question.task?.forEach((taskItem)=>{
       if(task.id == taskItem.id){
         taskItem.selected = true
       } else {
@@ -115,10 +121,13 @@ export class ConversationComponent implements OnInit{
     }
   }
   submit(){
-    this.gptService.sendMessage(this.selectedUser.id,this.answer).then(data=>{
-      this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
-        
+    if(this.answer){
+      this.gptService.sendMessage(this.selectedUser.id,this.answer).then(data=>{
+        this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
+          
+        })
       })
-    })
+    }
+    
   }
 }

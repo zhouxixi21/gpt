@@ -1,18 +1,25 @@
 <div class="container">
-  <div class="user-list">
-    <div [class]="'bot-item' + (user.selected? ' selected': '')" *ngFor="let user of userList" (click)="selectUser(user)">
-      <div class="bot-item-container">
-        <img src="assets/robot.svg">
-        <div class="bot-item-content">
-          <span>{{user.name}}</span>
-          <span style="color: gray;">{{user.lastMessage}}</span>
+  <div [class]="collapseMenu?'collapse_user_list':'user-list'">
+    <div *ngIf="!collapseMenu">
+      <div [class]="'bot-item' + (user.selected? ' selected': '')" *ngFor="let user of userList" (click)="selectUser(user)">
+        <div class="bot-item-container">
+          <img src="assets/robot.svg">
+          <div class="bot-item-content">
+            <span>{{user.name}}</span>
+            <span style="color: gray;">{{user.lastMessage}}</span>
+            
+          </div>
           
         </div>
-        
       </div>
     </div>
+    <div style="width: 100%;margin-bottom: 20px;display: flex; margin-right: 10px;justify-content: flex-end;">
+      <span nz-icon style="cursor: pointer;" (click)="changeCollapseMenu()" nzType="double-left" *ngIf="!collapseMenu" nzTheme="outline"></span>
+      <span nz-icon style="cursor: pointer;" (click)="changeCollapseMenu()" nzType="double-right" *ngIf="collapseMenu" nzTheme="outline"></span>
+    </div>
+    
   </div>
-  <div class="conversation-container">
+  <div class="conversation-container" [style]="collapseMenu? 'width: calc(100% - 30px)': 'width: calc(100% - 200px)'">
     <div class="conversation-title">
       <div class="conversation-title-content">
         <img src="assets/robot.svg">
@@ -43,33 +50,42 @@
           <div class="conversation-item-content">
             <nz-spin nzSize="large" *ngIf="conversation.task && conversation.task.length == 0" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
             <div class="conversation-item-content-task" *ngIf="conversation.task && conversation.task.length > 0">
-              <div class="conversation-item-content-text" *ngIf="(!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].response != ''">{{conversation.task[0].response}}</div>
+              <div class="conversation-item-content-text" *ngIf="(!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].output != ''">{{conversation.task[0].output}}</div>
 
-              <div class="conversation-item-content-task-list"  *ngIf="!((!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].response != '')">
-                <div *ngFor="let task of conversation.task"  (click)="selectTask(task,conversation)" [class]="'conversation-item-content-task-item' + (task.selected?' select': (task.status != 'Waiting'? ' pointer': ''))">
+              <div class="conversation-item-content-task-list"  *ngIf="!((!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].output != '')">
+                <div *ngFor="let task of conversation.task; let index = index"  (click)="selectTask(task,conversation,index)" [class]="'conversation-item-content-task-item' + (task.selected?' select': (task.status != 'Waiting'? ' pointer': ''))">
                   <span nz-icon *ngIf="task.status == 'In Progress'" [nzType]="'loading'"></span>
                   <span nz-icon *ngIf="task.status == 'Need to check'" style="color: rgb(255,205,0);" nzType="exclamation-circle" nzTheme="fill"></span>
                   <span nz-icon nzType="check-circle" style="color: green;" *ngIf="task.status == 'Finished'"  nzTheme="fill"></span>
                   <span nz-icon nzType="clock-circle" *ngIf="task.status == 'Waiting'"nzTheme="outline"></span>
                   <span nz-icon nzType="close-circle" *ngIf="task.status == 'Failed'" style="color: rgb(255,73,68);" nzTheme="fill"></span>
-                  <span style="margin-left: 8px;font-weight: bold;">{{task.name}}</span>
+                  <span style="margin-left: 8px;font-weight: bold;">Step {{index + 1}}: {{task.name}}</span>
                   <div class="conversation-item-content-task-time">
-                    <div *ngIf="task.status != 'Waiting' && task.startTime" >Start Time: {{task.startTime}}</div>
-                    <div *ngIf="task.finishTime">Finish Time: {{task.finishTime}}</div>
+                    <div style="width: 200px;font-size: 10px;color: #979797">{{task.description}}</div>
                   </div>
                 </div>
               </div>
               
             </div>
             <div class="conversation-item-content-task-detail"  *ngIf="conversation.selectedTask">
-              <nz-spin nzSize="large" *ngIf="!(conversation.selectedTask.response || conversation.selectedTask.children) && conversation.selectedTask.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
-              <div *ngIf="conversation.selectedTask.response || conversation.selectedTask.children">
-                <pre *ngIf="conversation.selectedTask.response" style="margin-bottom: 16px;white-space: pre-wrap;font-size: 10px;">Response: {{conversation.selectedTask.response}}</pre>
-               
+              <nz-spin nzSize="large" *ngIf="!(conversation.selectedTask.output || conversation.selectedTask.children) && conversation.selectedTask.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
+              <div *ngIf="conversation.selectedTask.output || conversation.selectedTask.input || conversation.selectedTask.summary || conversation.selectedTask.children">
+                
                 <div *ngIf="conversation.selectedTask.children && conversation.selectedTask.children.length > 0">
-                  <app-task [children]="conversation.selectedTask.children"></app-task>
+                  <app-task [parentIndex]="conversation.selectIndex + '-'" [children]="conversation.selectedTask.children"></app-task>
                 
                 </div>
+                <nz-collapse *ngIf="conversation.selectedTask.output || conversation.selectedTask.summary || conversation.selectedTask.input" [nzBordered]="false">
+                  <nz-collapse-panel nzHeader="Summary" *ngIf="conversation.selectedTask.summary" [nzActive]="true">
+                    <pre *ngIf="conversation.selectedTask.summary" style="margin-bottom: 16px;white-space: pre-wrap;font-size: 10px;">{{conversation.selectedTask.summary}}</pre>
+                  </nz-collapse-panel>
+                  <nz-collapse-panel nzHeader="Input" *ngIf="conversation.selectedTask.input" [nzActive]="false">
+                    <pre *ngIf="conversation.selectedTask.input" style="margin-bottom: 16px;white-space: pre-wrap;font-size: 10px;">{{conversation.selectedTask.input}}</pre>
+                  </nz-collapse-panel>
+                  <nz-collapse-panel nzHeader="Output" *ngIf="conversation.selectedTask.output" [nzActive]="false">
+                    <pre *ngIf="conversation.selectedTask.output" style="margin-bottom: 16px;white-space: pre-wrap;font-size: 10px;">{{conversation.selectedTask.output}}</pre>
+                  </nz-collapse-panel>
+                </nz-collapse>
               </div>
             </div>
            
@@ -79,7 +95,7 @@
       </div>
     </div>
     <div class="answer-question">
-      <input nz-input [(ngModel)]="answer" />
+      <input nz-input (keyup.enter)="submit()" [(ngModel)]="answer" />
       <img style="width: 23px;margin-left: 16px;cursor: pointer;" (click)="submit()" src="assets/send.svg"/>
 
     </div>

@@ -9,4 +9,11 @@ import { ISHOWTASK } from "src/app/common/common.interface";
 })
 export class TaskComponent{
   @Input() children: Array<ISHOWTASK> = []
+  @Input() parentIndex: string = ''
+  type: string = 'Step'
+  constructor(){
+    if(this.children && this.children.length > 0 && this.children[0].type == 'Process'){
+      this.type = 'Process'
+    }
+  }
 }

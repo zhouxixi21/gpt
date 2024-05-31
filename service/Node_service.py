@@ -5,37 +5,27 @@ import os
 from datagpt.constant.Path_constant import Path_constant
 
 
-def get_content(s):
-    start_index = s.find("'")
-    content = s[start_index + 1:]
-    extract_text = []
-    res = []
-    while "'" in content:
-        end_index = content.find("'")
-        extract_text.append(content[:end_index])
-        if len(content) == end_index:
-            break
-        else:
-            content = content[end_index+1:]
-    need_skip = False
-    for i in range(0, len(extract_text)):
-        if extract_text[i].endswith('\\') and i < len(extract_text):
-            res.append((extract_text[i][:len(extract_text[i]) - 1] + "'" + extract_text[i + 1]).replace('```json', '').replace('```', ''))
-            need_skip = True
-        elif need_skip is False:
-            res.append(extract_text[i].replace('```json', '').replace('```', ''))
-        else:
-            need_skip = False
-    return res
 
 
 def is_json_string(s):
 
     try:
-        json.loads(s.replace("'", '"').strip())
+        json.loads(s.strip())
         return True
     except (ValueError, json.JSONDecodeError):
         return False
+
+
+def edit_input_output(task):
+    if len(task['input']) > 0:
+        task['input'] = task['input'].strip()[10:]
+        if task['input'].endswith('"}'):
+            task['input'] = task['input'][:len(task['input']) - 2]
+    if len(task['output']) > 0:
+        task['output'] = task['output'].strip()[11:]
+        if task['output'].endswith('"}'):
+            task['output'] = task['output'][:len(task['output']) - 2]
+    return task
 
 
 def format_task(lines, index, level):
@@ -47,26 +37,34 @@ def format_task(lines, index, level):
         'startTime': '',
         'name': '',
         'finishTime': '',
-        'response': '',
+        'input': '',
+        'output': '',
+        'summary': '',
+        'type': 'Step',
+        'description': '',
         'children': []
     }
     i = index
     is_start = False
     has_content = False
+    in_input = False
+    in_output = False
+
     current_level = 1
     while i < len(lines):
         placeholder_pattern = r'\[([a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12})*?-?(start|end)( [0-9]*-[0-9]*-[0-9]* [0-9]*:[0-9]*:[0-9]*)?\]'
         split = re.split(placeholder_pattern, lines[i])
         if split[0] != '':
-            if split[0].strip() != '```' and split[0].strip() != '```json':
-                if split[0].startswith('content=') or split[0].startswith('text='):
-                    response = split[0]
-                    task['response'] = get_content(response)[0].replace('\\n', '\n').replace('\\t', '\t')
-
-                    has_content = True
-                elif has_content is False:
-                    response = split[0].replace('\\n', '\n').replace('\\t', '\t')
-                    task['response'] += response + '\n'
+            if split[0].strip().startswith('{"input":'):
+                in_input = True
+            if split[0].strip().startswith('{"output":'):
+                in_input = False
+                in_output = True
+            if in_input:
+                input_line = split[0]
+                task['input'] += input_line
+            if in_output:
+                task['output'] += split[0]
         elif len(split) > 4:
             if split[2] == 'start':
                 task['internal_id'] = split[1]
@@ -78,27 +76,30 @@ def format_task(lines, index, level):
                     task['id'] = level
                 if task['status'] == 'Waiting':
                     task['name'] = split[4].strip()
+                    # TODO type
+                    task['type'] = 'Step'
+                    # TODO description
+                    task['description'] = ''
                     task['status'] = 'In Progress'
                     task['startTime'] = split[3]
                 else:
                     children_level = str(task['id']) + '-' + str(current_level)
-                    task['response'] = ''
+                    task['input'] = ''
+                    task['output'] = ''
                     child_task, i = format_task(lines, i, children_level)
-                    if child_task['name'] == 'StrOutputParser':
-                        child_task['name'] = 'Execution'
-                    if task['name'] == 'RunnableSequence':
-                        task['name'] = child_task['name']
-                        child_task['name'] = 'Analysing'
-                    task['children'].append(child_task)
+                    if child_task['name'] == 'Summary':
+                        task['children'][len(task['children']) - 1]['summary'] = child_task['output']
+                    else:
+                        task['children'].append(child_task)
                     current_level += 1
                     if i > len(lines):
-                        return task, i
+                        return edit_input_output(task), i
             elif split[2] == 'end':
                 task['status'] = 'Finished'
                 task['finishTime'] = split[3]
-                return task, i
+                return edit_input_output(task), i
         i += 1
-    return task, len(lines)
+    return edit_input_output(task), len(lines)
 
 
 def check_status(node_id):
@@ -118,11 +119,10 @@ def check_status(node_id):
                     task, index = format_task(lines, index, 0)
                     tasks.append(task)
                     index += 1
-                response = tasks[len(tasks) - 1]['response']
-                if response == '':
-                    print(tasks[len(tasks) - 1])
-                    response = ''
-                return 'Online', response
+                output = tasks[len(tasks) - 1]['output']
+                if output == '':
+                    output = ''
+                return 'Online', output
             else:
                 return 'In Progress', data[len(data) - 1]['content']
 
@@ -141,7 +141,6 @@ def get_detail(node_id):
             index += 1
         f.close()
     response = []
-    print(json.dumps(tasks, indent=4))
     index = 0
     while index < len(content):
         content_id = content[index]['id']
@@ -150,7 +149,6 @@ def get_detail(node_id):
             'response': content[index]['content']
         })
         task = [task_item for task_item in tasks if task_item['id'] == content_id]
-        print(content_id)
         if len(task) == 0:
             response.append({
                 'person': 'DEV GPT Agent',
@@ -165,14 +163,12 @@ def get_detail(node_id):
                 show_task = task
             response.append({
                 'person': 'DEV GPT Agent',
-                'response': task[0]['response'],
+                'response': task[0]['output'],
                 'task': show_task
             })
         index += 1
     return response
+
+
 if __name__ == '__main__':
-
-    text = "Here is a string with a backslash: 'It\\'s easy to use' and another without: 'But it\\'s also easy'"
-
-    # 正则表达式匹配不包含单引号但包含反斜杠的字符串
-    print(get_content(text))
+    get_detail(3)

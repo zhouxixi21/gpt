@@ -107,9 +107,9 @@
                   
                 </div>
                 <div class="question-item-content-task-detail" *ngIf="question.selectedTask">
-                  <nz-spin nzSize="large" *ngIf="!(question.selectedTask.response && question.selectedTask.children) && question.selectedTask.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
-                  <div *ngIf="question.selectedTask.response || question.selectedTask.children">
-                    <div *ngIf="question.selectedTask.response" style="margin-bottom: 16px;">Response: {{question.selectedTask.response}}</div>
+                  <nz-spin nzSize="large" *ngIf="!(question.selectedTask.output && question.selectedTask.children) && question.selectedTask.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
+                  <div *ngIf="question.selectedTask.output || question.selectedTask.children">
+                    <div *ngIf="question.selectedTask.output" style="margin-bottom: 16px;">output: {{question.selectedTask.output}}</div>
                    
                     <div *ngIf="question.selectedTask.children">
                       <nz-collapse nzExpandIconPosition="right">
@@ -134,8 +134,8 @@
                               </div>
                             </div>
                           </ng-template>
-                          <div *ngIf="childItem.response">Anaylsis Content: {{childItem.response}}</div>
-                          <nz-spin nzSize="large" *ngIf="!childItem.response || childItem.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
+                          <div *ngIf="childItem.output">Anaylsis Content: {{childItem.output}}</div>
+                          <nz-spin nzSize="large" *ngIf="!childItem.output || childItem.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
                         </nz-collapse-panel>
                       </nz-collapse>
                       
