@@ -75,11 +75,19 @@ def format_task(lines, index, level):
                 elif level != 0:
                     task['id'] = level
                 if task['status'] == 'Waiting':
-                    task['name'] = split[4].strip()
-                    # TODO type
-                    task['type'] = 'Step'
-                    # TODO description
-                    task['description'] = ''
+                    title = split[4].strip().split("==>")
+                    if len(title) > 2:
+                        task['name'] = title[1].strip()
+                    else:
+                        task['name'] = ''
+                    if len(title) > 1:
+                        task['type'] = title[0].title()
+                    else:
+                        task['type'] = ''
+                    if len(title) > 3:
+                        task['description'] = title[2]
+                    else:
+                        task['description'] = ''
                     task['status'] = 'In Progress'
                     task['startTime'] = split[3]
                 else:
