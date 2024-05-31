@@ -5,24 +5,26 @@
       <ng-template #stepsTitleComponent>
         <div class="process-item-title-container">
           <div class="process-item-title-left-part">
-            <span nz-icon *ngIf="!childItem.selected" (click)="openChildrenItem(index,true)"
+            <div style="display: flex;">
+              <span nz-icon *ngIf="!childItem.selected" (click)="openChildrenItem(index,true)"
               style="cursor: pointer;line-height: 26px;" nzType="plus-square" nzTheme="outline"></span>
-            <span nz-icon *ngIf="childItem.selected" (click)="openChildrenItem(index,false)"
-              style="cursor: pointer;line-height: 26px;" nzType="minus-square" nzTheme="outline"></span>
-            <span class="process-item-title-name">Process {{parentIndex}}{{index + 1}}:
-              <span nz-icon *ngIf="childItem.status == 'In Progress'" style="margin: 4px;" [nzType]="'loading'"></span>
-              <span nz-icon *ngIf="childItem.status == 'Need to check'" style="color: rgb(255,205,0);margin: 4px;"
-                nzType="exclamation-circle" nzTheme="fill"></span>
-              <span nz-icon nzType="check-circle" style="color: green;margin: 4px;" *ngIf="childItem.status == 'Finished'"
-                nzTheme="fill"></span>
-              <span nz-icon nzType="clock-circle" style="margin: 4px;" *ngIf="childItem.status == 'Waiting'"
-                nzTheme="outline"></span>
-              <span nz-icon nzType="close-circle" *ngIf="childItem.status == 'Failed'"
-                style="color: rgb(255,73,68);margin: 4px;" nzTheme="fill"></span>
-    
-              {{childItem.name}}
-            </span>
-            <div class="process-item-title-description">{{childItem.description}}</div>
+              <span nz-icon *ngIf="childItem.selected" (click)="openChildrenItem(index,false)"
+                style="cursor: pointer;line-height: 26px;" nzType="minus-square" nzTheme="outline"></span>
+              <span class="process-item-title-name">Process {{parentIndex}}{{index + 1}}:
+                <span nz-icon *ngIf="childItem.status == 'In Progress'" style="margin: 4px;" [nzType]="'loading'"></span>
+                <span nz-icon *ngIf="childItem.status == 'Need to check'" style="color: rgb(255,205,0);margin: 4px;"
+                  nzType="exclamation-circle" nzTheme="fill"></span>
+                <span nz-icon nzType="check-circle" style="color: green;margin: 4px;" *ngIf="childItem.status == 'Finished'"
+                  nzTheme="fill"></span>
+                <span nz-icon nzType="clock-circle" style="margin: 4px;" *ngIf="childItem.status == 'Waiting'"
+                  nzTheme="outline"></span>
+                <span nz-icon nzType="close-circle" *ngIf="childItem.status == 'Failed'"
+                  style="color: rgb(255,73,68);margin: 4px;" nzTheme="fill"></span>
+      
+                {{childItem.name}}
+              </span>
+            </div>
+            <div class="process-item-title-description">Description: {{childItem.description}}</div>
     
           </div>
           <div class="process-item-title-right-part">
