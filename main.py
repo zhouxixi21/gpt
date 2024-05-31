@@ -3,7 +3,7 @@ from flask import Flask, send_from_directory
 from flask_cors import CORS
 
 from controller.Node_List_Controller import node_controller
-from datagpt.controller.Conversation_controller import conversation_controller
+from controller.Conversation_controller import conversation_controller
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
@@ -31,4 +31,4 @@ def not_found_error(error):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8080, debug=True)
+    app.run(host='127.0.0.1', port=8020, debug=True)

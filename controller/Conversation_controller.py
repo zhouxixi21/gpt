@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 
-from datagpt.model import Response
-from datagpt.service import Conversation_service
+from model import Response
+from service import Conversation_service
 
 conversation_controller = Blueprint('conversation_controller', __name__)
 

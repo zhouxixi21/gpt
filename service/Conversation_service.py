@@ -1,8 +1,8 @@
 import json
 import os
 import uuid
-
-from datagpt.constant.Path_constant import Path_constant
+import requests
+from constant.Path_constant import Path_constant
 
 
 def send_email(node_id, message):
@@ -20,6 +20,7 @@ def send_email(node_id, message):
     })
     # TO DO
     # call api for gpt
+    requests.post('http://localhost:8000/develop', json.dumps(content[len(content)-1]))
     with open(file_path, "w") as file:
         json.dump(content, file, indent=4)
         file.close()

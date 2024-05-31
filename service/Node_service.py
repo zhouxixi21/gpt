@@ -2,7 +2,7 @@ import json
 import re
 import os
 
-from datagpt.constant.Path_constant import Path_constant
+from constant.Path_constant import Path_constant
 
 
 

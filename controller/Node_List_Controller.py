@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 
-from datagpt.model import Response
-from datagpt.service import Node_service
+from model import Response
+from service import Node_service
 
 node_controller = Blueprint('node_controller', __name__)
 
