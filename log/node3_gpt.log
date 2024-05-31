@@ -58,7 +58,7 @@ Content:
 [7359a087-246f-4108-9e98-2ff4a812add1-end 2024-05-31 17:27:06]
 
 [efa1426a-1f2f-11ef-b811-acde48001122-end 2024-05-31 17:27:06]
-[f2b8ecaa-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:06] step ==> Analyze Dependencies ==> Generate the dependency tree of a project using a command line tool, and then determine all dependencies that need to be updated based on the specified dependency to be upgraded
+[f2b8ecaa-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:06] step ==> Analyze Dependencies ==> Generate the dependency tree and identify dependencies to update based on a specified upgrade.
 [f2b8fdb2-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:06] step ==> Retrieving Dependencies ==> Retrieve the dependency tree of a project
 [f2b91568-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:06] process ==> Execute Command ==> Execute command line
 {"output":"[INFO] Scanning for projects...
