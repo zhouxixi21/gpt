@@ -76,15 +76,15 @@ def format_task(lines, index, level):
                     task['id'] = level
                 if task['status'] == 'Waiting':
                     title = split[4].strip().split("==>")
-                    if len(title) > 2:
+                    if len(title) >= 2:
                         task['name'] = title[1].strip()
                     else:
                         task['name'] = ''
-                    if len(title) > 1:
-                        task['type'] = title[0].title()
+                    if len(title) >= 1:
+                        task['type'] = title[0].title().strip()
                     else:
                         task['type'] = ''
-                    if len(title) > 3:
+                    if len(title) >= 3:
                         task['description'] = title[2]
                     else:
                         task['description'] = ''
@@ -113,6 +113,8 @@ def format_task(lines, index, level):
 def check_status(node_id):
     with open(Path_constant.NODE_CONVERSATION_FILE_PATH.replace("<placeholder>", str(node_id)), 'r') as f:
         data = json.load(f)
+        if len(data) == 0:
+            return 'Online', ''
         last_id = data[len(data) - 1]['id']
         with open(Path_constant.NODE_GPT_FILE_PATH.replace("<placeholder>", str(node_id)), 'r') as gptf:
             content = gptf.read()

@@ -4,8 +4,8 @@
       <div style="display: block;width: 100%;">
         <div style="display: flex;background: #202932;justify-content: space-between;">
           <div style="display: block;">
-            <div style="display: flex;">
-              Step {{parentIndex}}{{index+1}}: 
+            <div style="display: flex; ">
+              {{childItem.type}} {{parentIndex}}{{index+1}}: 
               <span nz-icon *ngIf="childItem.status == 'In Progress'" style="margin: 4px;" [nzType]="'loading'"></span>
               <span nz-icon *ngIf="childItem.status == 'Need to check'" style="color: rgb(255,205,0);margin: 4px;" nzType="exclamation-circle" nzTheme="fill"></span>
               <span nz-icon nzType="check-circle" style="color: green;margin: 4px;" *ngIf="childItem.status == 'Finished'"  nzTheme="fill"></span>
@@ -13,12 +13,12 @@
               <span nz-icon nzType="close-circle" *ngIf="childItem.status == 'Failed'" style="color: rgb(255,73,68);margin: 4px;" nzTheme="fill"></span>
               {{childItem.name}}
             </div>
-            <div style="font-size: 10px;color: #9c9c9c">
+            <div *ngIf="childItem.description" style="font-size: 10px;max-width:80%; color: #9c9c9c">
               Description: {{childItem.description}}
             </div> 
           </div>
           <div>
-            <div style="font-size: 12px;line-height: 23px;">
+            <div style="font-size: 12px;line-height: 23px;width: 200px">
               Start Time: {{childItem.startTime}}
             </div>
             <div *ngIf="childItem.finishTime" style="font-size: 12px;line-height: 23px;">
@@ -35,9 +35,10 @@
         </div>
       </div>
     </ng-template>
-    <pre *ngIf="childItem.children && childItem.children.length > 0">
-      <app-task [parentIndex]="parentIndex + (index+1) + '-'" [children]="childItem.children"></app-task>
-    </pre>
+    <div *ngIf="childItem.children && childItem.children.length > 0">
+      <app-task *ngIf="childItem.children[0].type == 'Step'" [parentIndex]="parentIndex + (index+1) + '-'" [children]="childItem.children"></app-task>
+      <app-process *ngIf="childItem.children[0].type == 'Process'" [parentIndex]="parentIndex + (index+1) + '-'" [children]="childItem.children"></app-process>
+    </div>
     
     <nz-collapse [nzBordered]="false" *ngIf="childItem.input">
       <nz-collapse-panel nzHeader="Input" *ngIf="childItem.input" [nzActive]="false">
