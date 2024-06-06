@@ -199,7 +199,7 @@ export class ConversationComponent implements OnInit{
     if(this.answer && this.selectedUser.status != 'In Progress'){
       this.gptService.sendMessage(this.selectedUser.id,this.answer).then(data=>{
         this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
-          
+          this.initData(0)
         })
       })
     }
