@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from "@angular/core";
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from "@angular/core";
 import { ISHOWTASK } from "src/app/common/common.interface";
 
 @Component({
@@ -12,12 +12,15 @@ export class ProcessComponent{
   @Input('children')
   set setChildren(children:any){
     this.children = children
-    this.children.forEach(childrenItem=>{
-      childrenItem.selected = false
-    })
+
   }
+  @Output() selectChange = new EventEmitter();
   @Input() parentIndex: string = ''
   openChildrenItem(index: number, status:boolean){
     this.children[index].selected = status
+    this.open(this.parentIndex + (index + 1), !status)
+  }
+  open(index: string, status: boolean){
+    this.selectChange.emit({index: index, status: status})
   }
 }

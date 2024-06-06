@@ -1,25 +1,6 @@
 <div class="container">
-  <div [class]="collapseMenu?'collapse_user_list':'user-list'">
-    <div *ngIf="!collapseMenu">
-      <div [class]="'bot-item' + (user.selected? ' selected': '')" *ngFor="let user of userList" (click)="selectUser(user)">
-        <div class="bot-item-container">
-          <img src="assets/robot.svg">
-          <div class="bot-item-content">
-            <span>{{user.name}}</span>
-            <span style="color: gray;">{{user.lastMessage}}</span>
-            
-          </div>
-          
-        </div>
-      </div>
-    </div>
-    <div style="width: 100%;margin-bottom: 20px;display: flex; margin-right: 10px;justify-content: flex-end;">
-      <span nz-icon style="cursor: pointer;" (click)="changeCollapseMenu()" nzType="double-left" *ngIf="!collapseMenu" nzTheme="outline"></span>
-      <span nz-icon style="cursor: pointer;" (click)="changeCollapseMenu()" nzType="double-right" *ngIf="collapseMenu" nzTheme="outline"></span>
-    </div>
-    
-  </div>
-  <div class="conversation-container" [style]="collapseMenu? 'width: calc(100% - 30px)': 'width: calc(100% - 200px)'">
+  
+  <div class="conversation-container" [style]="collapseMenu? 'width: 100%': 'width: 100%'">
     <div class="conversation-title">
       <div class="conversation-title-content">
         <img src="assets/robot.svg">
@@ -34,7 +15,7 @@
       </div>
     </div>
     <div class="conversation-content">
-      <div *ngFor="let conversation of conversationList" class="conversation-item">
+      <div *ngFor="let conversation of conversationList;let conversationIndex = index" class="conversation-item">
         <div *ngIf="conversation.person == 'user'" class="conversation-item-container">
           <div class="conversation-item-logo">
             <img src="assets/user.svg" />
@@ -72,7 +53,7 @@
               <div *ngIf="conversation.selectedTask.output || conversation.selectedTask.input || conversation.selectedTask.summary || conversation.selectedTask.children">
                 
                 <div *ngIf="conversation.selectedTask.children && conversation.selectedTask.children.length > 0">
-                  <app-task [parentIndex]="conversation.selectIndex + '-'" [children]="conversation.selectedTask.children"></app-task>
+                  <app-task [parentIndex]="conversation.selectIndex + '-'" [children]="conversation.selectedTask.children" (selectChange)="changeSelectedIndex($event,conversationIndex)"></app-task>
                 
                 </div>
                 <nz-collapse *ngIf="conversation.selectedTask.output || conversation.selectedTask.summary || conversation.selectedTask.input" [nzBordered]="false">
@@ -95,8 +76,8 @@
       </div>
     </div>
     <div class="answer-question">
-      <input nz-input (keyup.enter)="submit()" [(ngModel)]="answer" />
-      <img style="width: 23px;margin-left: 16px;cursor: pointer;" (click)="submit()" src="assets/send.svg"/>
+      <input nz-input (keyup.enter)="submit()" [(ngModel)]="answer" [disabled]="selectedUser.status == 'In Progress'" />
+      <img style="width: 23px;margin-left: 16px;cursor: pointer;" *ngIf="selectedUser.status != 'In Progress'" (click)="submit()" src="assets/send.svg"/>
 
     </div>
   </div>

@@ -39,9 +39,9 @@ Upgrade spring-boot-start-parent library version from 3.1.5 to 3.2.3
 
 [251ac609-bc89-413a-a47f-533575f9d4b0-end 2024-05-31 17:27:05]
 
-[7359a087-246f-4108-9e98-2ff4a812add1-start 2024-05-31 17:27:05] step ==> Summary ==> 
+[7359a087-246f-4108-9e98-2ff4a812add1-start 2024-05-31 17:27:05] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -62,13 +62,13 @@ Content:
 [f2b8fdb2-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:06] step ==> Retrieving Dependencies ==> Retrieve the dependency tree of a project
 [f2b91568-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:06] process ==> Execute Command ==> Execute command line
 {"output":"[INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] --------------------------< com.example:demo >--------------------------
 [INFO] Building demo 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
-[INFO] 
+[INFO]
 [INFO] --- dependency:3.5.0:tree (default-cli) @ demo ---
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
 [INFO] com.example:demo:jar:0.0.1-SNAPSHOT
@@ -152,20 +152,20 @@ Content:
 [INFO] ------------------------------------------------------------------------
 "}
 [f2b91568-1f2f-11ef-b811-acde48001122-end 2024-05-31 17:27:11]
-[b03ab31c-a0ac-4b7a-b95a-1397da9dda7e-start 2024-05-31 17:27:11] step ==> Summary ==> 
+[b03ab31c-a0ac-4b7a-b95a-1397da9dda7e-start 2024-05-31 17:27:11] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
 [INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] --------------------------< com.example:demo >--------------------------
 [INFO] Building demo 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
-[INFO] 
+[INFO]
 [INFO] --- dependency:3.5.0:tree (default-cli) @ demo ---
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
 [INFO] com.example:demo:jar:0.0.1-SNAPSHOT
@@ -256,19 +256,19 @@ Content:
 
 [2e0f8ba3-69da-4aa9-ac27-a4420812e5ea-start 2024-05-31 17:27:13] process ==> Verify Build Result ==> Verify the result fo the command
 
-{"input":"Human: 
+{"input":"Human:
     Based on the maven or gradle build output, identify whether it success or failure, return as provided JSON:
     - result : <result should be true or false bool type>
-    
+
     build output:
     [INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] --------------------------< com.example:demo >--------------------------
 [INFO] Building demo 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
-[INFO] 
+[INFO]
 [INFO] --- dependency:3.5.0:tree (default-cli) @ demo ---
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
 [INFO] com.example:demo:jar:0.0.1-SNAPSHOT
@@ -359,9 +359,9 @@ Content:
 
 [2e0f8ba3-69da-4aa9-ac27-a4420812e5ea-end 2024-05-31 17:27:14]
 
-[5844c7bc-43bd-4547-877f-780832b6625e-start 2024-05-31 17:27:14] step ==> Summary ==> 
+[5844c7bc-43bd-4547-877f-780832b6625e-start 2024-05-31 17:27:14] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -373,13 +373,13 @@ Content:
 [5844c7bc-43bd-4547-877f-780832b6625e-end 2024-05-31 17:27:15]
 
 {"output":"[INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] --------------------------< com.example:demo >--------------------------
 [INFO] Building demo 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
-[INFO] 
+[INFO]
 [INFO] --- dependency:3.5.0:tree (default-cli) @ demo ---
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
 [INFO] com.example:demo:jar:0.0.1-SNAPSHOT
@@ -463,20 +463,20 @@ Content:
 [INFO] ------------------------------------------------------------------------
 "}
 [f2b8fdb2-1f2f-11ef-b811-acde48001122-end 2024-05-31 17:27:15]
-[5a1093de-84c6-41c6-b505-4f94da3a17ba-start 2024-05-31 17:27:15] step ==> Summary ==> 
+[5a1093de-84c6-41c6-b505-4f94da3a17ba-start 2024-05-31 17:27:15] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
 [INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] --------------------------< com.example:demo >--------------------------
 [INFO] Building demo 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
-[INFO] 
+[INFO]
 [INFO] --- dependency:3.5.0:tree (default-cli) @ demo ---
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
 [INFO] com.example:demo:jar:0.0.1-SNAPSHOT
@@ -567,18 +567,18 @@ Content:
 
 [cb14066f-f503-4e2a-83b5-922e50ae41ed-start 2024-05-31 17:27:17] step ==> Analyze Associations ==> Analyze the dependencies associated with a specific dependency within the dependency tree
 
-{"input":"Human: 
+{"input":"Human:
     Based on provided dependency tree and task Upgrade spring-boot-start-parent library version from 3.1.5 to 3.2.3, which dependencies should be changed.
 
     Dependency Tree:
     [INFO] Scanning for projects...
-[INFO] 
+[INFO]
 [INFO] --------------------------< com.example:demo >--------------------------
 [INFO] Building demo 0.0.1-SNAPSHOT
 [INFO]   from pom.xml
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
-[INFO] 
+[INFO]
 [INFO] --- dependency:3.5.0:tree (default-cli) @ demo ---
 [WARNING] The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
 [INFO] com.example:demo:jar:0.0.1-SNAPSHOT
@@ -674,9 +674,9 @@ These dependencies should be updated to version 3.2.3 to align with the upgraded
 
 [cb14066f-f503-4e2a-83b5-922e50ae41ed-end 2024-05-31 17:27:20]
 
-[d874135f-c665-4589-b897-36e037083ffc-start 2024-05-31 17:27:20] step ==> Summary ==> 
+[d874135f-c665-4589-b897-36e037083ffc-start 2024-05-31 17:27:20] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -700,9 +700,9 @@ These dependencies should be updated to version 3.2.3 to align with the upgraded
 {"input":"Upgrade spring-boot-start-parent library version from 3.1.5 to 3.2.3"}
 {"output":"/Users/liuzhongxu/Documents/Learning/demo 2/pom.xml"}
 [fbf1d854-1f2f-11ef-b811-acde48001122-end 2024-05-31 17:27:26]
-[0b230f81-f058-405a-b4cb-3d97cc3922e4-start 2024-05-31 17:27:26] step ==> Summary ==> 
+[0b230f81-f058-405a-b4cb-3d97cc3922e4-start 2024-05-31 17:27:26] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -715,7 +715,7 @@ Content:
 
 [a9d32e2a-0c9f-4ad0-8f93-87a6873467d3-start 2024-05-31 17:27:27] step ==> Suggest Code Modifications ==> Generate code modification suggestions based on specified requirements and analysis of the provided code
 
-{"input":"Human: 
+{"input":"Human:
     Version:
     Based on the provided dependency tree, the following dependencies should be changed to upgrade the spring-boot-start-parent library version from 3.1.5 to 3.2.3:
 
@@ -833,9 +833,9 @@ These dependencies should be updated to version 3.2.3 to align with the upgraded
 
 [a9d32e2a-0c9f-4ad0-8f93-87a6873467d3-end 2024-05-31 17:27:32]
 
-[841943ed-83cd-4cbd-8204-6bc9db97fb09-start 2024-05-31 17:27:32] step ==> Summary ==> 
+[841943ed-83cd-4cbd-8204-6bc9db97fb09-start 2024-05-31 17:27:32] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -871,9 +871,9 @@ Content:
 [841943ed-83cd-4cbd-8204-6bc9db97fb09-end 2024-05-31 17:27:34]
 
 [fbf1d6b0-1f2f-11ef-b811-acde48001122-end 2024-05-31 17:27:34]
-[fbf1d6b0-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:34] step ==> Change Code ==> 
-[03048de4-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:34] step ==> Code Generation ==> 
-[03082bca-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:34] step ==> Search Relative File ==> 
+[fbf1d6b0-1f2f-11ef-b811-acde48001122-start 2024-05-31 17:27:34] step ==> Change Code ==>
+[03048de4-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:34] step ==> Code Generation ==>
+[03082bca-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:34] step ==> Search Relative File ==>
 {"input":"search target files from filesystem based on code change suggestion"}
 {"output":"{'pom.xml': '<?xml version="1.0" encoding="UTF-8"?>\n<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n\txsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">\n\t<modelVersion>4.0.0</modelVersion>\n\t<parent>\n\t\t<groupId>org.springframework.boot</groupId>\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\n\t\t<version>3.1.5</version>\n\t\t<relativePath/> <!-- lookup parent from repository -->\n\t</parent>\n\t<groupId>com.example</groupId>\n\t<artifactId>demo</artifactId>\n\t<version>0.0.1-SNAPSHOT</version>\n\t<name>demo</name>\n\t<description>Demo project for Spring Boot</description>\n\t<properties>\n\t\t<java.version>17</java.version>\n\t</properties>\n\t<dependencies>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.projectlombok</groupId>\n\t\t\t<artifactId>lombok</artifactId>\n\t\t\t<optional>true</optional>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>mysql</groupId>\n\t\t\t<artifactId>mysql-connector-java</artifactId>\n\t\t\t<version>8.0.33</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.mybatis.spring.boot</groupId>\n\t\t\t<artifactId>mybatis-spring-boot-starter</artifactId>\n\t\t\t<version>3.0.2</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\n\t\t\t<scope>test</scope>\n\t\t</dependency>\n\t</dependencies>\n\n\t<build>\n\t\t<plugins>\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\n\t\t\t</plugin>\n            <plugin>\n                <groupId>org.apache.maven.plugins</groupId>\n                <artifactId>maven-compiler-plugin</artifactId>\n                <configuration>\n                    <source>16</source>\n                    <target>16</target>\n                </configuration>\n            </plugin>\n        </plugins>\n\t</build>\n\n</project>\n'}"}
 [03082bca-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:34]
@@ -929,7 +929,7 @@ File: pom.xml
 46 			<scope>test</scope>
 47 		</dependency>
 48 	</dependencies>
-49 
+49
 50 	<build>
 51 		<plugins>
 52 			<plugin>
@@ -946,13 +946,13 @@ File: pom.xml
 63             </plugin>
 64         </plugins>
 65 	</build>
-66 
+66
 67 </project>
-68 
+68
 
 ```
 
-Request: 
+Request:
 please refer to below json, find dependencyName from filepath, then update oldValue to newValue:
 
 {"filepath": "/Users/liuzhongxu/Documents/Learning/demo 2/pom.xml", "lineNumber": 10, "artifactId": "spring-boot-starter", "oldValue": "<version>3.1.5</version>", "newValue": "<version>3.2.3</version>"}
@@ -1028,7 +1028,7 @@ Always follow the best practices for the requested languages for folder/file str
 @@ -8,1 +8,1 @@
 -		<version>3.1.5</version>
 +		<version>3.2.3</version>
-``` 
+```
 
 This diff updates the version of the "spring-boot-starter-parent" in the pom.xml file from 3.1.5 to 3.2.3 as requested.
 
@@ -1036,9 +1036,9 @@ this concludes a fully working implementation."}
 
 [4ea27551-6bd4-4c6a-8add-800764892393-end 2024-05-31 17:27:37]
 
-[87cc2428-a4a8-4b61-9c56-c06d529af2d9-start 2024-05-31 17:27:37] step ==> Summary ==> 
+[87cc2428-a4a8-4b61-9c56-c06d529af2d9-start 2024-05-31 17:27:37] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -1049,13 +1049,13 @@ Content:
 
 [87cc2428-a4a8-4b61-9c56-c06d529af2d9-end 2024-05-31 17:27:39]
 
-[06812c2a-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:39] step ==> API Cost ==> 
+[06812c2a-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:39] step ==> API Cost ==>
 {"input":"calculate total api cost"}
 {"output":"Total api cost: $ 0.0024215"}
 [06812c2a-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:39]
 [03048de4-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:39]
-[06813efe-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:39] step ==> Code Generation ==> 
-[06856196-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:40] step ==> Search Relative File ==> 
+[06813efe-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:39] step ==> Code Generation ==>
+[06856196-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:40] step ==> Search Relative File ==>
 {"input":"search target files from filesystem based on code change suggestion"}
 {"output":"{'pom.xml': '<?xml version="1.0" encoding="UTF-8"?>\n<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n\txsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">\n\t<modelVersion>4.0.0</modelVersion>\n\t<parent>\n\t\t<groupId>org.springframework.boot</groupId>\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\n\t\t<version>3.2.3</version>\n\t\t<relativePath/> <!-- lookup parent from repository -->\n\t</parent>\n\t<groupId>com.example</groupId>\n\t<artifactId>demo</artifactId>\n\t<version>0.0.1-SNAPSHOT</version>\n\t<name>demo</name>\n\t<description>Demo project for Spring Boot</description>\n\t<properties>\n\t\t<java.version>17</java.version>\n\t</properties>\n\t<dependencies>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.projectlombok</groupId>\n\t\t\t<artifactId>lombok</artifactId>\n\t\t\t<optional>true</optional>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>mysql</groupId>\n\t\t\t<artifactId>mysql-connector-java</artifactId>\n\t\t\t<version>8.0.33</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.mybatis.spring.boot</groupId>\n\t\t\t<artifactId>mybatis-spring-boot-starter</artifactId>\n\t\t\t<version>3.0.2</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\n\t\t\t<scope>test</scope>\n\t\t</dependency>\n\t</dependencies>\n\n\t<build>\n\t\t<plugins>\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\n\t\t\t</plugin>\n            <plugin>\n                <groupId>org.apache.maven.plugins</groupId>\n                <artifactId>maven-compiler-plugin</artifactId>\n                <configuration>\n                    <source>16</source>\n                    <target>16</target>\n                </configuration>\n            </plugin>\n        </plugins>\n\t</build>\n\n</project>\n'}"}
 [06856196-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:40]
@@ -1111,7 +1111,7 @@ File: pom.xml
 46 			<scope>test</scope>
 47 		</dependency>
 48 	</dependencies>
-49 
+49
 50 	<build>
 51 		<plugins>
 52 			<plugin>
@@ -1128,13 +1128,13 @@ File: pom.xml
 63             </plugin>
 64         </plugins>
 65 	</build>
-66 
+66
 67 </project>
-68 
+68
 
 ```
 
-Request: 
+Request:
 please refer to below json, find dependencyName from filepath, then update oldValue to newValue:
 
 {"filepath": "/Users/liuzhongxu/Documents/Learning/demo 2/pom.xml", "lineNumber": 13, "artifactId": "spring-boot-starter-web", "oldValue": "<version>3.1.5</version>", "newValue": "<version>3.2.3</version>"}
@@ -1210,7 +1210,7 @@ Always follow the best practices for the requested languages for folder/file str
 @@ -26,1 +26,1 @@
 -26 		<version>3.1.5</version>
 +26 		<version>3.2.3</version>
-``` 
+```
 
 This diff updates the version of the "spring-boot-starter-web" artifact in the pom.xml file from 3.1.5 to 3.2.3 as requested.
 
@@ -1218,9 +1218,9 @@ This concludes a fully working implementation."}
 
 [8a85e39a-5e71-4a68-b76e-f92e18f63a5d-end 2024-05-31 17:27:43]
 
-[a850f804-0a09-4216-a6cc-b2b5e98363e5-start 2024-05-31 17:27:43] step ==> Summary ==> 
+[a850f804-0a09-4216-a6cc-b2b5e98363e5-start 2024-05-31 17:27:43] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -1233,13 +1233,13 @@ Summary: The request to update the version of the "spring-boot-starter-web" arti
 
 [a850f804-0a09-4216-a6cc-b2b5e98363e5-end 2024-05-31 17:27:45]
 
-[09cacfb2-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:45] step ==> API Cost ==> 
+[09cacfb2-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:45] step ==> API Cost ==>
 {"input":"calculate total api cost"}
 {"output":"Total api cost: $ 0.002429"}
 [09cacfb2-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:45]
 [06813efe-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:45]
-[09cad944-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:45] step ==> Code Generation ==> 
-[09cd8f68-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:45] step ==> Search Relative File ==> 
+[09cad944-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:45] step ==> Code Generation ==>
+[09cd8f68-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:45] step ==> Search Relative File ==>
 {"input":"search target files from filesystem based on code change suggestion"}
 {"output":"{'pom.xml': '<?xml version="1.0" encoding="UTF-8"?>\n<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n\txsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">\n\t<modelVersion>4.0.0</modelVersion>\n\t<parent>\n\t\t<groupId>org.springframework.boot</groupId>\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\n\t\t<version>3.2.3</version>\n\t\t<relativePath/> <!-- lookup parent from repository -->\n\t</parent>\n\t<groupId>com.example</groupId>\n\t<artifactId>demo</artifactId>\n\t<version>0.0.1-SNAPSHOT</version>\n\t<name>demo</name>\n\t<description>Demo project for Spring Boot</description>\n\t<properties>\n\t\t<java.version>17</java.version>\n\t</properties>\n\t<dependencies>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.projectlombok</groupId>\n\t\t\t<artifactId>lombok</artifactId>\n\t\t\t<optional>true</optional>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>mysql</groupId>\n\t\t\t<artifactId>mysql-connector-java</artifactId>\n\t\t\t<version>8.0.33</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.mybatis.spring.boot</groupId>\n\t\t\t<artifactId>mybatis-spring-boot-starter</artifactId>\n\t\t\t<version>3.0.2</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\n\t\t\t<scope>test</scope>\n\t\t</dependency>\n\t</dependencies>\n\n\t<build>\n\t\t<plugins>\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\n\t\t\t</plugin>\n            <plugin>\n                <groupId>org.apache.maven.plugins</groupId>\n                <artifactId>maven-compiler-plugin</artifactId>\n                <configuration>\n                    <source>16</source>\n                    <target>16</target>\n                </configuration>\n            </plugin>\n        </plugins>\n\t</build>\n\n</project>\n'}"}
 [09cd8f68-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:45]
@@ -1295,7 +1295,7 @@ File: pom.xml
 46 			<scope>test</scope>
 47 		</dependency>
 48 	</dependencies>
-49 
+49
 50 	<build>
 51 		<plugins>
 52 			<plugin>
@@ -1312,13 +1312,13 @@ File: pom.xml
 63             </plugin>
 64         </plugins>
 65 	</build>
-66 
+66
 67 </project>
-68 
+68
 
 ```
 
-Request: 
+Request:
 please refer to below json, find dependencyName from filepath, then update oldValue to newValue:
 
 {"filepath": "/Users/liuzhongxu/Documents/Learning/demo 2/pom.xml", "lineNumber": 29, "artifactId": "spring-boot-starter-test", "oldValue": "<version>3.1.5</version>", "newValue": "<version>3.2.3</version>"}
@@ -1394,7 +1394,7 @@ Always follow the best practices for the requested languages for folder/file str
 @@ -45,1 +45,1 @@
 -45             <version>3.1.5</version>
 +45             <version>3.2.3</version>
-``` 
+```
 
 This diff updates the version of the "spring-boot-starter-test" dependency in the pom.xml file from "3.1.5" to "3.2.3".
 
@@ -1402,9 +1402,9 @@ This concludes a fully working implementation."}
 
 [5f572922-dca4-4016-8713-b099e9b3b4aa-end 2024-05-31 17:27:48]
 
-[42f52de5-b58e-4af8-b778-c489ece20e48-start 2024-05-31 17:27:48] step ==> Summary ==> 
+[42f52de5-b58e-4af8-b778-c489ece20e48-start 2024-05-31 17:27:48] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -1415,7 +1415,7 @@ Content:
 
 [42f52de5-b58e-4af8-b778-c489ece20e48-end 2024-05-31 17:27:50]
 
-[0caf1e0e-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:50] step ==> API Cost ==> 
+[0caf1e0e-1f30-11ef-b811-acde48001122-start 2024-05-31 17:27:50] step ==> API Cost ==>
 {"input":"calculate total api cost"}
 {"output":"Total api cost: $ 0.002423"}
 [0caf1e0e-1f30-11ef-b811-acde48001122-end 2024-05-31 17:27:50]
@@ -1438,7 +1438,7 @@ Content:
 2024-05-31T17:28:00.629+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68780 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)
 2024-05-31T17:28:00.630+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
 2024-05-31T17:28:01.457+08:00  WARN 68780 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2024-05-31T17:28:01.504+08:00 ERROR 68780 --- [           main] o.s.boot.SpringApplication               : Application run failed
@@ -1682,25 +1682,25 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
 	... 17 more
 
-[ERROR] Errors: 
+[ERROR] Errors:
 [ERROR]   DemoApplicationTests.contextLoads » IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: 
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo:
+[ERROR]
 [ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.
 [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 "}
 [0caf310a-1f30-11ef-b811-acde48001122-end 2024-05-31 17:28:01]
-[7e9925ac-c556-4499-ab28-2d633824bcab-start 2024-05-31 17:28:01] step ==> Summary ==> 
+[7e9925ac-c556-4499-ab28-2d633824bcab-start 2024-05-31 17:28:01] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -1718,7 +1718,7 @@ Content:
 2024-05-31T17:28:00.629+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68780 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)
 2024-05-31T17:28:00.630+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
 2024-05-31T17:28:01.457+08:00  WARN 68780 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2024-05-31T17:28:01.504+08:00 ERROR 68780 --- [           main] o.s.boot.SpringApplication               : Application run failed
@@ -1962,18 +1962,18 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
 	... 17 more
 
-[ERROR] Errors: 
+[ERROR] Errors:
 [ERROR]   DemoApplicationTests.contextLoads » IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: 
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo:
+[ERROR]
 [ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.
 [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
@@ -1985,10 +1985,10 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 
 [0382a3f3-af2e-4361-9c05-d5c3034c8c99-start 2024-05-31 17:28:05] process ==> Verify Build Result ==> Verify the result fo the command
 
-{"input":"Human: 
+{"input":"Human:
     Based on the maven or gradle build output, identify whether it success or failure, return as provided JSON:
     - result : <result should be true or false bool type>
-    
+
     build output:
     17:27:59.954 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
 17:28:00.101 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
@@ -2004,7 +2004,7 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 2024-05-31T17:28:00.629+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68780 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)
 2024-05-31T17:28:00.630+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
 2024-05-31T17:28:01.457+08:00  WARN 68780 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2024-05-31T17:28:01.504+08:00 ERROR 68780 --- [           main] o.s.boot.SpringApplication               : Application run failed
@@ -2248,18 +2248,18 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
 	... 17 more
 
-[ERROR] Errors: 
+[ERROR] Errors:
 [ERROR]   DemoApplicationTests.contextLoads » IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: 
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo:
+[ERROR]
 [ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.
 [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
@@ -2271,9 +2271,9 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 
 [0382a3f3-af2e-4361-9c05-d5c3034c8c99-end 2024-05-31 17:28:06]
 
-[b2a3862c-9f43-4030-8309-5b3008826dde-start 2024-05-31 17:28:07] step ==> Summary ==> 
+[b2a3862c-9f43-4030-8309-5b3008826dde-start 2024-05-31 17:28:07] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -2285,8 +2285,8 @@ Content:
 [b2a3862c-9f43-4030-8309-5b3008826dde-end 2024-05-31 17:28:07]
 
 [0caf2aca-1f30-11ef-b811-acde48001122-end 2024-05-31 17:28:07]
-[172968e4-1f30-11ef-b811-acde48001122-start 2024-05-31 17:28:07] step ==> Code Generation ==> 
-[172daef4-1f30-11ef-b811-acde48001122-start 2024-05-31 17:28:07] step ==> Search Relative File ==> 
+[172968e4-1f30-11ef-b811-acde48001122-start 2024-05-31 17:28:07] step ==> Code Generation ==>
+[172daef4-1f30-11ef-b811-acde48001122-start 2024-05-31 17:28:07] step ==> Search Relative File ==>
 {"input":"search target files from filesystem based on code change suggestion"}
 {"output":"{'pom.xml': '<?xml version="1.0" encoding="UTF-8"?>\n<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n\txsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">\n\t<modelVersion>4.0.0</modelVersion>\n\t<parent>\n\t\t<groupId>org.springframework.boot</groupId>\n\t\t<artifactId>spring-boot-starter-parent</artifactId>\n\t\t<version>3.2.3</version>\n\t\t<relativePath/> <!-- lookup parent from repository -->\n\t</parent>\n\t<groupId>com.example</groupId>\n\t<artifactId>demo</artifactId>\n\t<version>0.0.1-SNAPSHOT</version>\n\t<name>demo</name>\n\t<description>Demo project for Spring Boot</description>\n\t<properties>\n\t\t<java.version>17</java.version>\n\t</properties>\n\t<dependencies>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-web</artifactId>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.projectlombok</groupId>\n\t\t\t<artifactId>lombok</artifactId>\n\t\t\t<optional>true</optional>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>mysql</groupId>\n\t\t\t<artifactId>mysql-connector-java</artifactId>\n\t\t\t<version>8.0.33</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.mybatis.spring.boot</groupId>\n\t\t\t<artifactId>mybatis-spring-boot-starter</artifactId>\n\t\t\t<version>3.0.2</version>\n\t\t</dependency>\n\t\t<dependency>\n\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t<artifactId>spring-boot-starter-test</artifactId>\n\t\t\t<scope>test</scope>\n\t\t</dependency>\n\t</dependencies>\n\n\t<build>\n\t\t<plugins>\n\t\t\t<plugin>\n\t\t\t\t<groupId>org.springframework.boot</groupId>\n\t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\n\t\t\t</plugin>\n            <plugin>\n                <groupId>org.apache.maven.plugins</groupId>\n                <artifactId>maven-compiler-plugin</artifactId>\n                <configuration>\n                    <source>16</source>\n                    <target>16</target>\n                </configuration>\n            </plugin>\n        </plugins>\n\t</build>\n\n</project>\n'}"}
 [172daef4-1f30-11ef-b811-acde48001122-end 2024-05-31 17:28:07]
@@ -2342,7 +2342,7 @@ File: pom.xml
 46 			<scope>test</scope>
 47 		</dependency>
 48 	</dependencies>
-49 
+49
 50 	<build>
 51 		<plugins>
 52 			<plugin>
@@ -2359,13 +2359,13 @@ File: pom.xml
 63             </plugin>
 64         </plugins>
 65 	</build>
-66 
+66
 67 </project>
-68 
+68
 
 ```
 
-Request: 
+Request:
 please refer to below json, find dependencyName from filepath, then update oldValue to newValue:
 
 "17:27:59.954 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n17:28:00.101 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n :: Spring Boot ::                (v3.2.3)\n\n2024-05-31T17:28:00.629+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68780 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)\n2024-05-31T17:28:00.630+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: \"default\"\n2024-05-31T17:28:01.457+08:00  WARN 68780 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String\n2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : \n\nError starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.\n2024-05-31T17:28:01.504+08:00 ERROR 68780 --- [           main] o.s.boot.SpringApplication               : Application run failed\n\njava.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String\n\tat org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:837) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:620) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:575) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:138) ~[spring-context-6.1.4.jar:6.1.4]\n\tat org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]\n\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]\n\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.4.jar:6.1.4]\n\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.4.jar:6.1.4]\n\tat org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]\n\tat java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]\n\tat java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]\n\tat java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]\n\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]\n\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]\n\tat java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.1.2.jar:3.1.2]\n\n2024-05-31T17:28:01.521+08:00  WARN 68780 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.example.demo.DemoApplicationTests@7a389761]\n\njava.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [\"org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true\"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = \"src/main/webapp\", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]\n\tat java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]\n\tat java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]\n\tat java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]\n\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]\n\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]\n\tat java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]\n\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\n\tat org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.1.2.jar:3.1.2]\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.1.2.jar:3.1.2]\nCaused by: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String\n\tat org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:837) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:620) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:575) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534) ~[spring-beans-6.1.4.jar:6.1.4]\n\tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:138) ~[spring-context-6.1.4.jar:6.1.4]\n\tat org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]\n\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]\n\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.4.jar:6.1.4]\n\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.4.jar:6.1.4]\n\tat org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454) ~[spring-boot-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.2.3.jar:3.2.3]\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.4.jar:6.1.4]\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.4.jar:6.1.4]\n\t... 73 common frames omitted\n\n[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.833 s <<< FAILURE! -- in com.example.demo.DemoApplicationTests\n[ERROR] com.example.demo.DemoApplicationTests.contextLoads -- Time elapsed: 0.013 s <<< ERROR!\njava.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [\"org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true\"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = \"src/main/webapp\", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)\n\tat org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)\n\tat org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)\n\tat org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)\n\tat org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)\n\tat org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)\n\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)\n\tat java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)\n\tat java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)\n\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)\n\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)\n\tat java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)\n\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)\n\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)\n\tat java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)\n\tat java.base/java.util.Optional.orElseGet(Optional.java:364)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\nCaused by: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String\n\tat org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86)\n\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:837)\n\tat org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:620)\n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:575)\n\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)\n\tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:138)\n\tat org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)\n\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)\n\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)\n\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)\n\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:334)\n\tat org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)\n\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)\n\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)\n\tat org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)\n\tat org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)\n\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)\n\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)\n\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)\n\t... 17 more\n\n[ERROR] Errors: \n[ERROR]   DemoApplicationTests.contextLoads \u00bb IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [\"org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true\"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = \"src/main/webapp\", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]\n[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: \n[ERROR] \n[ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.\n[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.\n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException\n"
@@ -2463,16 +2463,17 @@ Always follow the best practices for the requested languages for folder/file str
 
 [3bfdb1a4-ba7f-4660-9eef-a9d7ca097821-end 2024-05-31 17:28:12]
 
-[cce9c1d3-18f4-4dc5-b3f7-dc8668171f72-start 2024-05-31 17:28:12] step ==> Summary ==> 
+[cce9c1d3-18f4-4dc5-b3f7-dc8668171f72-start 2024-05-31 17:28:12] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
 [HumanMessage(content='```\nFile: pom.xml\n1 <?xml version="1.0" encoding="UTF-8"?>\n2 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"\n3 \txsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">\n4 \t<modelVersion>4.0.0</modelVersion>\n5 \t<parent>\n6 \t\t<groupId>org.springframework.boot</groupId>\n7 \t\t<artifactId>spring-boot-starter-parent</artifactId>\n8 \t\t<version>3.2.3</version>\n9 \t\t<relativePath/> <!-- lookup parent from repository -->\n10 \t</parent>\n11 \t<groupId>com.example</groupId>\n12 \t<artifactId>demo</artifactId>\n13 \t<version>0.0.1-SNAPSHOT</version>\n14 \t<name>demo</name>\n15 \t<description>Demo project for Spring Boot</description>\n16 \t<properties>\n17 \t\t<java.version>17</java.version>\n18 \t</properties>\n19 \t<dependencies>\n20 \t\t<dependency>\n21 \t\t\t<groupId>org.springframework.boot</groupId>\n22 \t\t\t<artifactId>spring-boot-starter</artifactId>\n23 \t\t</dependency>\n24 \t\t<dependency>\n25 \t\t\t<groupId>org.springframework.boot</groupId>\n26 \t\t\t<artifactId>spring-boot-starter-web</artifactId>\n27 \t\t</dependency>\n28 \t\t<dependency>\n29 \t\t\t<groupId>org.projectlombok</groupId>\n30 \t\t\t<artifactId>lombok</artifactId>\n31 \t\t\t<optional>true</optional>\n32 \t\t</dependency>\n33 \t\t<dependency>\n34 \t\t\t<groupId>mysql</groupId>\n35 \t\t\t<artifactId>mysql-connector-java</artifactId>\n36 \t\t\t<version>8.0.33</version>\n37 \t\t</dependency>\n38 \t\t<dependency>\n39 \t\t\t<groupId>org.mybatis.spring.boot</groupId>\n40 \t\t\t<artifactId>mybatis-spring-boot-starter</artifactId>\n41 \t\t\t<version>3.0.2</version>\n42 \t\t</dependency>\n43 \t\t<dependency>\n44 \t\t\t<groupId>org.springframework.boot</groupId>\n45 \t\t\t<artifactId>spring-boot-starter-test</artifactId>\n46 \t\t\t<scope>test</scope>\n47 \t\t</dependency>\n48 \t</dependencies>\n49 \n50 \t<build>\n51 \t\t<plugins>\n52 \t\t\t<plugin>\n53 \t\t\t\t<groupId>org.springframework.boot</groupId>\n54 \t\t\t\t<artifactId>spring-boot-maven-plugin</artifactId>\n55 \t\t\t</plugin>\n56             <plugin>\n57                 <groupId>org.apache.maven.plugins</groupId>\n58                 <artifactId>maven-compiler-plugin</artifactId>\n59                 <configuration>\n60                     <source>16</source>\n61                     <target>16</target>\n62                 </configuration>\n63             </plugin>\n64         </plugins>\n65 \t</build>\n66 \n67 </project>\n68 \n\n```\n\nRequest: \nplease refer to below json, find dependencyName from filepath, then update oldValue to newValue:\n\n"17:27:59.954 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\\n17:28:00.101 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests\\n\\n  .   ____          _            __ _ _\\n /\\\\\\\\ / ___\'_ __ _ _(_)_ __  __ _ \\\\ \\\\ \\\\ \\\\\\n( ( )\\\\___ | \'_ | \'_| | \'_ \\\\/ _` | \\\\ \\\\ \\\\ \\\\\\n \\\\\\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\\n  \'  |____| .__|_| |_|_| |_\\\\__, | / / / /\\n =========|_|==============|___/=/_/_/_/\\n :: Spring Boot ::                (v3.2.3)\\n\\n2024-05-31T17:28:00.629+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68780 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)\\n2024-05-31T17:28:00.630+08:00  INFO 68780 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: \\"default\\"\\n2024-05-31T17:28:01.457+08:00  WARN 68780 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute \'factoryBeanObjectType\': java.lang.String\\n2024-05-31T17:28:01.471+08:00  INFO 68780 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : \\n\\nError starting ApplicationContext. To display the condition evaluation report re-run your application with \'debug\' enabled.\\n2024-05-31T17:28:01.504+08:00 ERROR 68780 --- [           main] o.s.boot.SpringApplication               : Application run failed\\n\\njava.lang.IllegalArgumentException: Invalid value type for attribute \'factoryBeanObjectType\': java.lang.String\\n\\tat org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:837) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:620) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:575) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:138) ~[spring-context-6.1.4.jar:6.1.4]\\n\\tat org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]\\n\\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]\\n\\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.4.jar:6.1.4]\\n\\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.4.jar:6.1.4]\\n\\tat org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]\\n\\tat java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]\\n\\tat java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]\\n\\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]\\n\\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]\\n\\tat java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]\\n\\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]\\n\\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]\\n\\tat java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\\n\\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\\n\\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.1.2.jar:3.1.2]\\n\\n2024-05-31T17:28:01.521+08:00  WARN 68780 --- [           main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.example.demo.DemoApplicationTests@7a389761]\\n\\njava.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [\\"org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true\\"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = \\"src/main/webapp\\", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]\\n\\tat java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]\\n\\tat java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]\\n\\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]\\n\\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]\\n\\tat java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]\\n\\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]\\n\\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]\\n\\tat java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]\\n\\tat org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\\n\\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]\\n\\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]\\n\\tat org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.1.2.jar:3.1.2]\\n\\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.1.2.jar:3.1.2]\\nCaused by: java.lang.IllegalArgumentException: Invalid value type for attribute \'factoryBeanObjectType\': java.lang.String\\n\\tat org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:837) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:620) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:575) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534) ~[spring-beans-6.1.4.jar:6.1.4]\\n\\tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:138) ~[spring-context-6.1.4.jar:6.1.4]\\n\\tat org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788) ~[spring-context-6.1.4.jar:6.1.4]\\n\\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606) ~[spring-context-6.1.4.jar:6.1.4]\\n\\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.4.jar:6.1.4]\\n\\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.4.jar:6.1.4]\\n\\tat org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454) ~[spring-boot-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.2.3.jar:3.2.3]\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.4.jar:6.1.4]\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.4.jar:6.1.4]\\n\\t... 73 common frames omitted\\n\\n[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.833 s <<< FAILURE! -- in com.example.demo.DemoApplicationTests\\n[ERROR] com.example.demo.DemoApplicationTests.contextLoads -- Time elapsed: 0.013 s <<< ERROR!\\njava.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [\\"org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true\\"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = \\"src/main/webapp\\", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)\\n\\tat org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)\\n\\tat org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)\\n\\tat org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)\\n\\tat org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)\\n\\tat org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)\\n\\tat java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)\\n\\tat java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)\\n\\tat java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)\\n\\tat java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)\\n\\tat java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)\\n\\tat java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)\\n\\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)\\n\\tat java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)\\n\\tat java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)\\n\\tat java.base/java.util.Optional.orElseGet(Optional.java:364)\\n\\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\\n\\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\\nCaused by: java.lang.IllegalArgumentException: Invalid value type for attribute \'factoryBeanObjectType\': java.lang.String\\n\\tat org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getTypeForFactoryBeanFromAttributes(FactoryBeanRegistrySupport.java:86)\\n\\tat org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:837)\\n\\tat org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:620)\\n\\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:575)\\n\\tat org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:534)\\n\\tat org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:138)\\n\\tat org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:788)\\n\\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:606)\\n\\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)\\n\\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)\\n\\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:334)\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)\\n\\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)\\n\\tat org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)\\n\\tat org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)\\n\\tat org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)\\n\\tat org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)\\n\\t... 17 more\\n\\n[ERROR] Errors: \\n[ERROR]   DemoApplicationTests.contextLoads \\u00bb IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [\\"org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true\\"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = \\"src/main/webapp\\", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]\\n[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0\\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: \\n[ERROR] \\n[ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.\\n[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.\\n[ERROR] -> [Help 1]\\n[ERROR] \\n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\\n[ERROR] \\n[ERROR] For more information about the errors and possible solutions, please read the following articles:\\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException\\n"\n'), SystemMessage(content='You will get instructions for code to write.\nYou will write a very long answer. Make sure that every detail of the architecture is, in the end, implemented as code.\nThink step by step and reason yourself to the correct decisions to make sure we get it right.\nMake changes to existing code and implement new code in the unified git diff syntax. When implementing new code, First lay out the names of the core classes, functions, methods that will be necessary, As well as a quick comment on their purpose.\n\nYou will output the content of each file necessary to achieve the goal, including ALL code.\nOutput requested code changes and new code in the unified "git diff" syntax. Example:\n\n```diff\n--- example.txt\n+++ example.txt\n@@ -6,3 +6,4 @@\n     line content A\n     line content B\n+    new line added\n-    original line X\n+    modified line X with changes\n@@ -26,4 +27,5 @@\n         condition check:\n-            action for condition A\n+            if certain condition is met:\n+                alternative action for condition A\n         another condition check:\n-            action for condition B\n+            modified action for condition B\n```\n\nExample of a git diff creating a new file:\n\n```diff\n--- /dev/null\n+++ new_file.txt\n@@ -0,0 +1,3 @@\n+First example line\n+\n+Last example line\n```\n-A program will apply the diffs you generate exactly to the code, so diffs must be precise and unambiguous!\n-Every diff must be fenced with triple backtick ```.\n-The file names at the beginning of a diff, (lines starting with --- and +++) is the relative path to the file before and after the diff.\n-LINES TO BE REMOVED (starting with single -) AND LINES TO BE RETAIN (no starting symbol) HAVE TO REPLICATE THE DIFFED HUNK OF THE CODE EXACTLY LINE BY LINE. KEEP THE NUMBER OF RETAIN LINES SMALL IF POSSIBLE.\n-EACH LINE IN THE SOURCE FILES STARTS WITH A LINE NUMBER, WHICH IS NOT PART OF THE SOURCE CODE. NEVER TRANSFER THESE LINE NUMBERS TO THE DIFF HUNKS.\n-AVOID STARTING A HUNK WITH AN EMPTY LINE.\n\n\nAs far as compatible with the user request, start with the "entrypoint" file, then go to the ones that are imported by that file, and so on.\nPlease note that the code should be fully functional. No placeholders.\n\nFollow a language and framework appropriate best practice file naming convention.\nMake sure that files contain all imports, types etc.  The code should be fully functional. Make sure that code in different files are compatible with each other.\nEnsure to implement all code, if you are unsure, write a plausible implementation.\nInclude module dependency or package manager dependency definition file.\nBefore you finish, double check that all parts of the architecture is present in the files.\n\nWhen you are done, write finish with "this concludes a fully working implementation".\n\nUseful to know:\nAlmost always put different classes in different files.\nAlways use the programming language the user asks for.\nAlways add a comment briefly describing the purpose of the function definition.\nAdd comments explaining very complex bits of logic.\nAlways follow the best practices for the requested languages for folder/file structure and how to package the project.\n\n'), AIMessage(content='### File: pom.xml\n\n```diff\n--- pom.xml\n+++ pom.xml\n@@ -35,7 +35,7 @@\n \t\t\t<groupId>mysql</groupId>\n \t\t\t<artifactId>mysql-connector-java</artifactId>\n-\t\t\t<version>8.0.33</version>\n+\t\t\t<version>8.0.34</version>\n \t\t</dependency>\n \t\t<dependency>\n \t\t\t<groupId>org.mybatis.spring.boot</groupId>\n@@ -58,4 +58,10 @@\n \t\t\t</plugin>\n+            <plugin>\n+                <groupId>org.apache.maven.plugins</groupId>\n+                <artifactId>maven-surefire-plugin</artifactId>\n+                <version>3.1.2</version>\n+            </plugin>\n         </plugins>\n \t</build>\n```\n\n### This concludes a fully working implementation.', response_metadata={'finish_reason': 'stop'}, id='run-3bfdb1a4-ba7f-4660-9eef-a9d7ca097821-0')]
 "}
+[cce9c1d3-18f4-4dc5-b3f7-dc8668171f72-end 2024-05-31 17:28:13]
 
-[1aa6c318-1f30-11ef-b811-acde48001122-start 2024-05-31 17:28:13] step ==> API Cost ==> 
+[1aa6c318-1f30-11ef-b811-acde48001122-start 2024-05-31 17:28:13] step ==> API Cost ==>
 {"input":"calculate total api cost"}
 {"output":"Total api cost: $ 0.018047"}
 [1aa6c318-1f30-11ef-b811-acde48001122-end 2024-05-31 17:28:13]
@@ -2493,7 +2494,7 @@ Content:
 2024-05-31T17:28:19.989+08:00  INFO 68850 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68850 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)
 2024-05-31T17:28:19.990+08:00  INFO 68850 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
 2024-05-31T17:28:20.567+08:00  WARN 68850 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-2024-05-31T17:28:20.577+08:00  INFO 68850 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-05-31T17:28:20.577+08:00  INFO 68850 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2024-05-31T17:28:20.593+08:00 ERROR 68850 --- [           main] o.s.boot.SpringApplication               : Application run failed
@@ -2737,25 +2738,25 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
 	... 17 more
 
-[ERROR] Errors: 
+[ERROR] Errors:
 [ERROR]   DemoApplicationTests.contextLoads » IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: 
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo:
+[ERROR]
 [ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.
 [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 "}
 [1aa6de84-1f30-11ef-b811-acde48001122-end 2024-05-31 17:28:20]
-[4a288e07-c8cf-4436-9cc3-3d163c5fb143-start 2024-05-31 17:28:20] step ==> Summary ==> 
+[4a288e07-c8cf-4436-9cc3-3d163c5fb143-start 2024-05-31 17:28:20] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:
@@ -2773,7 +2774,7 @@ Content:
 2024-05-31T17:28:19.989+08:00  INFO 68850 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68850 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)
 2024-05-31T17:28:19.990+08:00  INFO 68850 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
 2024-05-31T17:28:20.567+08:00  WARN 68850 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-2024-05-31T17:28:20.577+08:00  INFO 68850 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-05-31T17:28:20.577+08:00  INFO 68850 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2024-05-31T17:28:20.593+08:00 ERROR 68850 --- [           main] o.s.boot.SpringApplication               : Application run failed
@@ -3017,18 +3018,18 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
 	... 17 more
 
-[ERROR] Errors: 
+[ERROR] Errors:
 [ERROR]   DemoApplicationTests.contextLoads » IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: 
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo:
+[ERROR]
 [ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.
 [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
@@ -3040,10 +3041,10 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 
 [12533d86-d62b-4d82-979e-e5dc3b915fed-start 2024-05-31 17:28:24] process ==> Verify Build Result ==> Verify the result fo the command
 
-{"input":"Human: 
+{"input":"Human:
     Based on the maven or gradle build output, identify whether it success or failure, return as provided JSON:
     - result : <result should be true or false bool type>
-    
+
     build output:
     17:28:19.566 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
 17:28:19.661 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.demo.DemoApplication for test class com.example.demo.DemoApplicationTests
@@ -3059,7 +3060,7 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 2024-05-31T17:28:19.989+08:00  INFO 68850 --- [           main] com.example.demo.DemoApplicationTests    : Starting DemoApplicationTests using Java 17.0.8 with PID 68850 (started by liuzhongxu in /Users/liuzhongxu/Documents/Learning/demo 2)
 2024-05-31T17:28:19.990+08:00  INFO 68850 --- [           main] com.example.demo.DemoApplicationTests    : No active profile set, falling back to 1 default profile: "default"
 2024-05-31T17:28:20.567+08:00  WARN 68850 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: java.lang.IllegalArgumentException: Invalid value type for attribute 'factoryBeanObjectType': java.lang.String
-2024-05-31T17:28:20.577+08:00  INFO 68850 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-05-31T17:28:20.577+08:00  INFO 68850 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2024-05-31T17:28:20.593+08:00 ERROR 68850 --- [           main] o.s.boot.SpringApplication               : Application run failed
@@ -3303,18 +3304,18 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
 	... 17 more
 
-[ERROR] Errors: 
+[ERROR] Errors:
 [ERROR]   DemoApplicationTests.contextLoads » IllegalState Failed to load ApplicationContext for [WebMergedContextConfiguration@75fa1be3 testClass = com.example.demo.DemoApplicationTests, locations = [], classes = [com.example.demo.DemoApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@63376bed, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3646a422, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7d0b7e3c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@742ff096, org.springframework.boot.test.context.SpringBootTestAnnotation@85e8c2c7], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 [ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo: 
-[ERROR] 
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project demo:
+[ERROR]
 [ERROR] Please refer to /Users/liuzhongxu/Documents/Learning/demo 2/target/surefire-reports for the individual test results.
 [ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
 [ERROR] -> [Help 1]
-[ERROR] 
+[ERROR]
 [ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
 [ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
+[ERROR]
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
@@ -3326,9 +3327,9 @@ Caused by: java.lang.IllegalArgumentException: Invalid value type for attribute 
 
 [12533d86-d62b-4d82-979e-e5dc3b915fed-end 2024-05-31 17:28:26]
 
-[51768153-6b0d-4ffa-8988-d48ff1430d89-start 2024-05-31 17:28:26] step ==> Summary ==> 
+[51768153-6b0d-4ffa-8988-d48ff1430d89-start 2024-05-31 17:28:26] step ==> Summary ==>
 
-{"input":"Human: 
+{"input":"Human:
 Based on below content, please give a brief summary:
 
 Content:

@@ -1,9 +1,9 @@
 <nz-collapse nzExpandIconPosition="right">
-  <nz-collapse-panel *ngFor="let childItem of children;let index = index" [nzHeader]="childrenTitleComponent" [nzActive]="false">
+  <nz-collapse-panel *ngFor="let childItem of children;let index = index" [nzHeader]="childrenTitleComponent" (nzActiveChange)="open(parentIndex + (index + 1),childItem.selected? true: false)" [(nzActive)]="childItem.selected">
     <ng-template #childrenTitleComponent>
       <div style="display: block;width: 100%;">
         <div style="display: flex;background: #202932;justify-content: space-between;">
-          <div style="display: block;">
+          <div style="display: block;width: 80%;">
             <div style="display: flex; ">
               {{childItem.type}} {{parentIndex}}{{index+1}}: 
               <span nz-icon *ngIf="childItem.status == 'In Progress'" style="margin: 4px;" [nzType]="'loading'"></span>
@@ -13,7 +13,7 @@
               <span nz-icon nzType="close-circle" *ngIf="childItem.status == 'Failed'" style="color: rgb(255,73,68);margin: 4px;" nzTheme="fill"></span>
               {{childItem.name}}
             </div>
-            <div *ngIf="childItem.description" style="font-size: 10px;max-width:80%; color: #9c9c9c">
+            <div *ngIf="childItem.description" style="font-size: 10px; color: #9c9c9c">
               Description: {{childItem.description}}
             </div> 
           </div>
@@ -26,9 +26,6 @@
             </div>
           </div>
         </div>
-        
-        
-        
         <nz-divider *ngIf="childItem.summary" nzText="Result Summary"></nz-divider>
         <div *ngIf="childItem.summary" style="white-space: pre-wrap;font-size: 10px;">
           {{childItem.summary.trim()}}
@@ -36,15 +33,15 @@
       </div>
     </ng-template>
     <div *ngIf="childItem.children && childItem.children.length > 0">
-      <app-task *ngIf="childItem.children[0].type == 'Step'" [parentIndex]="parentIndex + (index+1) + '-'" [children]="childItem.children"></app-task>
-      <app-process *ngIf="childItem.children[0].type == 'Process'" [parentIndex]="parentIndex + (index+1) + '-'" [children]="childItem.children"></app-process>
+      <app-task *ngIf="childItem.children[0].type == 'Step'" (selectChange)="openChildren($event)" [parentIndex]="parentIndex + (index+1) + '-'" [children]="childItem.children"></app-task>
+      <app-process *ngIf="childItem.children[0].type == 'Process'" (selectChange)="openChildren($event)" [parentIndex]="parentIndex + (index+1) + '-'" [children]="childItem.children"></app-process>
     </div>
     
     <nz-collapse [nzBordered]="false" *ngIf="childItem.input">
-      <nz-collapse-panel nzHeader="Input" *ngIf="childItem.input" [nzActive]="false">
+      <nz-collapse-panel nzHeader="Input" *ngIf="childItem.input"  (nzActiveChange)="open(parentIndex + (index + 1) + '-input',childItem.inputOpen? true: false)" [nzActive]="childItem.inputOpen">
         <pre style="white-space: pre-wrap;font-size: 10px;">{{childItem.input}}</pre>
       </nz-collapse-panel>
-      <nz-collapse-panel nzHeader="Output" *ngIf="childItem.output" [nzActive]="false">
+      <nz-collapse-panel nzHeader="Output" *ngIf="childItem.output" (nzActiveChange)="open(parentIndex + (index + 1) + '-output',childItem.outputOpen? true: false)" [nzActive]="childItem.outputOpen">
         <pre style="white-space: pre-wrap;font-size: 10px;">{{childItem.output}}</pre>
       </nz-collapse-panel>
     </nz-collapse>

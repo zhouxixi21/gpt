@@ -57,4 +57,6 @@ export interface ITASK{
 }
 export interface ISHOWTASK extends ITASK{
   selected?: boolean;
+  inputOpen?: boolean;
+  outputOpen?: boolean;
 }

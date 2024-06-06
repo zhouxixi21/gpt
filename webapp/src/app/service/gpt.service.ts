@@ -277,7 +277,6 @@ export class GPTService {
   async getRobotList(): Promise<Array<IROBOT>>{
     let res:any = await this.httpClient.get(NODE_LIST_URL).toPromise()
     return new Promise((resolve, reject) => {
-      console.log(res)
       resolve(res.data)
     })
     
@@ -293,7 +292,6 @@ export class GPTService {
   async getConversation(id: number): Promise<Array<ISHOWQUESTION>>{
     let res:any = await this.httpClient.get(NODE_DETAIL_URL + '?node_id=' + id).toPromise()
     return new Promise((resolve, reject) => {
-      console.log(res.data)
       resolve(res.data)
     })
   }

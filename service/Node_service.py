@@ -46,7 +46,6 @@ def format_task(lines, index, level):
     }
     i = index
     is_start = False
-    has_content = False
     in_input = False
     in_output = False
 
@@ -67,7 +66,6 @@ def format_task(lines, index, level):
                 task['output'] += split[0]
         elif len(split) > 4:
             if split[2] == 'start':
-                task['internal_id'] = split[1]
                 if level == 0 and is_start is False:
                     if split[1] is not None:
                         task['id'] = split[1]
@@ -75,6 +73,7 @@ def format_task(lines, index, level):
                 elif level != 0:
                     task['id'] = level
                 if task['status'] == 'Waiting':
+                    task['internal_id'] = split[1]
                     title = split[4].strip().split("==>")
                     if len(title) >= 2:
                         task['name'] = title[1].strip()
@@ -181,4 +180,4 @@ def get_detail(node_id):
 
 
 if __name__ == '__main__':
-    get_detail(3)
+    print(json.dumps(get_detail(3), indent=4))

@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from "@angular/core";
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from "@angular/core";
 import { ISHOWTASK } from "src/app/common/common.interface";
 
 @Component({
@@ -8,12 +8,24 @@ import { ISHOWTASK } from "src/app/common/common.interface";
   styleUrls: ['./task.component.scss']
 })
 export class TaskComponent{
-  @Input() children: Array<ISHOWTASK> = []
+  children: Array<ISHOWTASK> = []
+  @Input('children')
+  set setChildren(childrenInput: Array<ISHOWTASK>){
+    this.children = childrenInput
+    console.log(this.children)
+  }
   @Input() parentIndex: string = ''
+  @Output() selectChange = new EventEmitter()
   type: string = 'Step'
   constructor(){
     if(this.children && this.children.length > 0 && this.children[0].type == 'Process'){
       this.type = 'Process'
     }
+  }
+  open(index: string, status: boolean){
+    this.selectChange.emit({index: index, status: status})
+  }
+  openChildren(event: any){
+    this.selectChange.emit(event)
   }
 }
