@@ -41,17 +41,17 @@
           </div>
         </div>
         <div class="process-item-content" *ngIf="childItem.selected">
-          <nz-collapse [nzBordered]="false" *ngIf="childItem.input">
-            <nz-collapse-panel nzHeader="Input" *ngIf="childItem.input" (nzActiveChange)="open(parentIndex + (index + 1) + '-input', childItem.inputOpen? true: false)" [nzActive]="childItem.inputOpen">
-              <pre style="white-space: pre-wrap;font-size: 10px;">{{childItem.input}}</pre>
+          <nz-collapse  [nzExpandIconPosition]="'right'" [nzBordered]="false" *ngIf="childItem.input">
+            <nz-collapse-panel nzHeader="Input" class="input-collapse" *ngIf="childItem.input" (nzActiveChange)="open(parentIndex + (index + 1) + '-input', childItem.inputOpen? true: false)" [nzActive]="childItem.inputOpen">
+              <pre style="white-space: pre-wrap;padding-top: 20px;font-size: 10px;">{{childItem.input}}</pre>
             </nz-collapse-panel>
-            <nz-collapse-panel nzHeader="Output" *ngIf="childItem.output" (nzActiveChange)="open(parentIndex + (index + 1) + '-output', childItem.outputOpen? true: false)" [nzActive]="childItem.outputOpen">
-              <pre style="white-space: pre-wrap;font-size: 10px;">{{childItem.output}}</pre>
+            <nz-collapse-panel nzHeader="Output" class="output-collapse" *ngIf="childItem.output" (nzActiveChange)="open(parentIndex + (index + 1) + '-output', childItem.outputOpen? true: false)" [nzActive]="childItem.outputOpen">
+              <pre style="white-space: pre-wrap;padding-top: 20px;font-size: 10px;">{{childItem.output}}</pre>
             </nz-collapse-panel>
           </nz-collapse>
-          <pre style="white-space: pre-wrap;font-size: 14px;background-color: rgba(255, 255, 255, 0.04);"
+          <pre style="white-space: pre-wrap;font-size: 14px;padding: 10px 20px;background-color: rgba(255, 255, 255, 0.04);"
             *ngIf="!childItem.input && childItem.output">Result Detail:</pre>
-          <pre style="white-space: pre-wrap;font-size: 10px;    background-color: rgba(255, 255, 255, 0.04);"
+          <pre style="white-space: pre-wrap;font-size: 10px;padding: 10px 20px;background-color: rgba(255, 255, 255, 0.04);"
             *ngIf="!childItem.input && childItem.output">{{childItem.output}}</pre>
     
         </div>
