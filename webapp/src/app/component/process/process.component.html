@@ -1,0 +1,63 @@
+<div>
+  <div style="font-size: 18px;margin-bottom: 15px;">Process List:</div>
+  <nz-steps [nzCurrent]="children.length" nzProgressDot nzDirection="vertical">
+    <nz-step *ngFor="let childItem of children; let index = index" [nzTitle]="stepsTitleComponent">
+      <ng-template #stepsTitleComponent>
+        <div class="process-item-title-container">
+          <div class="process-item-title-left-part">
+            <div style="display: flex;">
+              <span nz-icon *ngIf="!childItem.selected" (click)="openChildrenItem(index,true)"
+              style="cursor: pointer;line-height: 26px;" nzType="plus-square" nzTheme="outline"></span>
+              <span nz-icon *ngIf="childItem.selected" (click)="openChildrenItem(index,false)"
+                style="cursor: pointer;line-height: 26px;" nzType="minus-square" nzTheme="outline"></span>
+              <span class="process-item-title-name">Process {{parentIndex}}{{index + 1}}:
+                <span nz-icon *ngIf="childItem.status == 'In Progress'" style="margin: 4px;" [nzType]="'loading'"></span>
+                <span nz-icon *ngIf="childItem.status == 'Need to check'" style="color: rgb(255,205,0);margin: 4px;"
+                  nzType="exclamation-circle" nzTheme="fill"></span>
+                <span nz-icon nzType="check-circle" style="color: green;margin: 4px;" *ngIf="childItem.status == 'Finished'"
+                  nzTheme="fill"></span>
+                <span nz-icon nzType="clock-circle" style="margin: 4px;" *ngIf="childItem.status == 'Waiting'"
+                  nzTheme="outline"></span>
+                <span nz-icon nzType="close-circle" *ngIf="childItem.status == 'Failed'"
+                  style="color: rgb(255,73,68);margin: 4px;" nzTheme="fill"></span>
+      
+                {{childItem.name}}
+              </span>
+            </div>
+            <div class="process-item-title-description">Description: {{childItem.description}}</div>
+    
+          </div>
+          <div class="process-item-title-right-part">
+            <div class="process-item-title-time"> Start Time: {{childItem.startTime}}</div>
+            <div *ngIf="childItem.finishTime" class="process-item-title-time"> Finish Time: {{childItem.finishTime}}</div>
+    
+          </div>
+    
+        </div>
+        <div style="background: #17202a !important;padding: 0 15px 15px 44px;">
+          <nz-divider style="margin: 0 !important;" *ngIf="childItem.summary" nzText="Result Summary"></nz-divider>
+          <div *ngIf="childItem.summary" style="white-space: pre-wrap;font-size: 10px;">
+            {{childItem.summary.trim()}}
+          </div>
+        </div>
+        <div class="process-item-content" *ngIf="childItem.selected">
+          <nz-collapse  [nzExpandIconPosition]="'right'" [nzBordered]="false" *ngIf="childItem.input">
+            <nz-collapse-panel nzHeader="Input" class="input-collapse" *ngIf="childItem.input" (nzActiveChange)="open(parentIndex + (index + 1) + '-input', childItem.inputOpen? true: false)" [nzActive]="childItem.inputOpen">
+              <pre style="white-space: pre-wrap;padding-top: 20px;font-size: 10px;">{{childItem.input}}</pre>
+            </nz-collapse-panel>
+            <nz-collapse-panel nzHeader="Output" class="output-collapse" *ngIf="childItem.output" (nzActiveChange)="open(parentIndex + (index + 1) + '-output', childItem.outputOpen? true: false)" [nzActive]="childItem.outputOpen">
+              <pre style="white-space: pre-wrap;padding-top: 20px;font-size: 10px;">{{childItem.output}}</pre>
+            </nz-collapse-panel>
+          </nz-collapse>
+          <nz-divider *ngIf="!childItem.input && childItem.output" style="margin: 0 !important;padding-bottom: 10px !important;" nzText="Result Detail"></nz-divider>
+
+          <pre style="white-space: pre-wrap;font-size: 10px;padding: 10px 20px;background-color: rgba(255, 255, 255, 0.04);"
+            *ngIf="!childItem.input && childItem.output">{{childItem.output}}</pre>
+    
+        </div>
+    
+      </ng-template>
+    </nz-step>
+  </nz-steps>
+    
+</div>

@@ -1,0 +1,29 @@
+.process-item-title-container{
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont !important;
+  display: flex;
+  padding: 7px 15px;
+  background: #17202a !important;
+  justify-content: space-between;
+  .process-item-title-left-part{
+    .process-item-title-name{
+      margin-left: 15px;
+      line-height: 24px;
+    }
+    .process-item-title-description{
+      padding-left: 28px;
+      color: #9c9c9c;
+      width: 300px;
+    }
+  }
+  .process-item-title-time{
+    font-family: -apple-system, BlinkMacSystemFont !important;
+    line-height: 24px;
+  }
+}
+.process-item-content{
+  padding: 0 15px 15px 44px;
+
+  background: #17202a !important;
+  font-family: -apple-system, BlinkMacSystemFont !important;
+}
