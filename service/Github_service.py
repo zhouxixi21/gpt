@@ -27,3 +27,4 @@ def get_issue_list():
         json.dump(has_processed_issue_list, file, indent=4)
         file.close()
     return issue_list
+

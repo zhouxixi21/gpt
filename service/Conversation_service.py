@@ -5,7 +5,7 @@ import requests
 from constant.Path_constant import Path_constant
 
 
-def send_email(node_id, message):
+def send_email(node_id, message, issue):
     message_id = str(uuid.uuid1())
     file_path = Path_constant.NODE_CONVERSATION_FILE_PATH.replace("<placeholder>", str(node_id))
     if os.path.exists(file_path):
@@ -16,7 +16,8 @@ def send_email(node_id, message):
         content = []
     content.append({
         "id": message_id,
-        "content": message
+        "content": message,
+        "issue": issue
     })
     # TO DO
     # call api for gpt

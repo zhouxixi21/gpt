@@ -301,8 +301,8 @@ export class GPTService {
       resolve(res.data)
     })
   }
-  async sendMessage(id: number,message: string){
-    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{node_id: id, message: message}).toPromise()
+  async sendMessage(id: number,message: string, issue: string){
+    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{node_id: id, message: message, issue: issue}).toPromise()
     return new Promise((resolve, reject) => {
       resolve(res.data)
     })
