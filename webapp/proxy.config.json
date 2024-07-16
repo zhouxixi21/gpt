@@ -1,0 +1,11 @@
+
+{
+  "/apis/**":{
+    "target": "http://localhost:8080/apis/",
+      "pathRewrite":{
+        "^/apis": "/apis",
+        "changeOrigin": true
+      },
+      "secure": false
+  }
+}

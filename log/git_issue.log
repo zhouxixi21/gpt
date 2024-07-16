@@ -1,0 +1,8 @@
+[
+    {
+        "id": 2408418517,
+        "number": 1,
+        "title": "Fix JVM",
+        "body": "Upgrade spring-boot-start-parent library version from 3.1.5 to 3.2.3"
+    }
+]

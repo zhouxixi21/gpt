@@ -1,0 +1,173 @@
+<div class="page-container">
+  <nz-breadcrumb>
+    <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+    <nz-breadcrumb-item class="final">GitHub Process</nz-breadcrumb-item>
+  </nz-breadcrumb>
+  <div class="content">
+    <div class="header">
+      <div class="title">Github List</div>
+      <div class="header-action">
+        <button nz-button (click)="openCreateProcessModal()" nzType="primary">Create new Process</button>
+      </div>
+    </div>
+    <div class="content-container">
+      <nz-collapse nzExpandIconPosition="right">
+        <nz-collapse-panel
+          *ngFor="let process of processList"
+          [nzHeader]="header"
+          [nzActive]="false"
+          (nzActiveChange)="getProcessDetail(process,$event)"
+          [nzExtra]="extraTemplate"
+        >
+          <ng-template #header>
+            <div class="collapse-panel-header">
+              <span class="id">#{{process.id}}</span>
+              <span class="title-content" [title]="process.description">Question: {{process.description}}</span>
+              <span class="time" *ngIf="!process.duration">Start Time: {{process.startTime}}</span>
+              <span class="time" *ngIf="process.duration">Duration: {{process.duration.number}}{{process.duration.unit}}</span>
+
+              <span style="margin-left:8px;">Current step: {{process.status.name}}</span>
+
+            </div>
+
+          </ng-template>
+          <ng-template #extraTemplate>
+            <div class="collapse-panel-header">
+              <button nz-button style="margin-right: 8px;" (click)="refresh(process)" nzType="primary">Refresh</button>
+              <span nz-icon *ngIf="process.status.status == 'In Progress'" [nzType]="'loading'"></span>
+              <span nz-icon *ngIf="process.status.status == 'Need to check'" style="color: rgb(255,205,0);" nzType="exclamation-circle" nzTheme="fill"></span>
+              <span nz-icon nzType="check-circle" style="color: green;" *ngIf="process.status.status == 'Finished'"  nzTheme="fill"></span>
+              <span nz-icon nzType="clock-circle" *ngIf="process.status.status == 'Waiting'" style="color: rgb(255,205,0);"  nzTheme="fill"></span>
+              <span nz-icon nzType="close-circle" *ngIf="process.status.status == 'Failed'" style="color: rgb(255,73,68);" nzTheme="fill"></span>
+              <span style="width: 100px;text-align: end;">{{process.status.status}}</span>
+
+            </div>
+            
+          </ng-template>
+          
+          <div *ngIf="process.detail">
+            <nz-steps nzSize="small" nzLabelPlacement="vertical">
+            
+              <nz-step *ngFor="let status of process.detail.status" [nzTitle]="status.name" [nzIcon]="iconTemplate" [nzStatus]="getStatus(status)" [nzDescription]="descTemplate">
+                <ng-template #descTemplate>
+                  <div class="description-container" *ngIf="status.status != 'Waiting'">
+                    <div class="description" *ngIf="status.status != 'Finished'">Start Time: {{status.startTime}}</div>
+                    <div class="description" *ngIf="status.status == 'Finished'">End Time: {{status.finishTime}}</div>
+                    <button style="margin-top: 8px;" (click)="clickAnswerQuestion(status)" nz-button nzSize="small" *ngIf="showAnswerQuestion(status)" nzType="primary">Answer Question</button>
+                    <button style="margin-top: 8px;" (click)="clickAnalysisProcess(status)" nz-button nzSize="small" *ngIf="showAnalysisProcess(status)" nzType="primary">See Analysis Process</button>
+
+
+                  </div>
+                </ng-template>
+                <ng-template #iconTemplate>
+                  <span nz-icon *ngIf="status.status == 'In Progress'" [nzType]="'loading'"></span>
+                  <span nz-icon *ngIf="status.status == 'Need to check'" style="color: rgb(255,205,0);" nzType="exclamation-circle" nzTheme="fill"></span>
+                  <span nz-icon nzType="check-circle" style="color: green;" *ngIf="status.status == 'Finished'"  nzTheme="fill"></span>
+                  <span nz-icon nzType="clock-circle" *ngIf="status.status == 'Waiting'"nzTheme="outline"></span>
+                  <span nz-icon nzType="close-circle" *ngIf="status.status == 'Failed'" style="color: rgb(255,73,68);" nzTheme="fill"></span>
+                </ng-template>
+              </nz-step>
+          </nz-steps>
+          </div>
+          
+        </nz-collapse-panel>
+      </nz-collapse>
+      <nz-modal [nzFooter]="null" [(nzVisible)]="questionModalVisible" [nzTitle]="questionModalTitle" (nzOnCancel)="handleQuestionModalCancel()">
+        <ng-container *nzModalContent>
+          <div *ngFor="let question of questionModalData" class="question-item">
+            <div *ngIf="question.person == 'user'" class="question-item-container">
+              <div class="question-item-logo">
+                <img src="assets/user.svg" />
+              </div>
+              <div class="question-item-content">
+                <div class="question-item-content-text">{{question.response}}</div>
+              </div>
+            </div>
+            <div *ngIf="question.person != 'user'" class="question-item-container">
+              <div class="question-item-logo">
+                <img src="assets/robot.svg" />
+              </div>
+              <div class="question-item-content">
+                <div class="question-item-content-text" *ngIf="!(question.task && question.task.length > 0)">{{question.response}}</div>
+                <div class="question-item-content-task" *ngIf="question.task && question.task.length > 0">
+                  <div class="question-item-content-task-list">
+                    <div *ngFor="let task of question.task"  (click)="selectTask(task,question)" [class]="'question-item-content-task-item' + (task.selected?' select': (task.status != 'Waiting'? ' pointer': ''))">
+                      <span nz-icon *ngIf="task.status == 'In Progress'" [nzType]="'loading'"></span>
+                      <span nz-icon *ngIf="task.status == 'Need to check'" style="color: rgb(255,205,0);" nzType="exclamation-circle" nzTheme="fill"></span>
+                      <span nz-icon nzType="check-circle" style="color: green;" *ngIf="task.status == 'Finished'"  nzTheme="fill"></span>
+                      <span nz-icon nzType="clock-circle" *ngIf="task.status == 'Waiting'"nzTheme="outline"></span>
+                      <span nz-icon nzType="close-circle" *ngIf="task.status == 'Failed'" style="color: rgb(255,73,68);" nzTheme="fill"></span>
+                      <span style="margin-left: 8px;font-weight: bold;">{{task.name}}</span>
+                      <div class="question-item-content-task-time">
+                        <div *ngIf="task.status != 'Waiting'">Start Time: {{task.startTime}}</div>
+                        <div *ngIf="task.finishTime">Finish Time: {{task.finishTime}}</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="question-item-content-task-detail" *ngIf="question.selectedTask">
+                  <nz-spin nzSize="large" *ngIf="!(question.selectedTask.output && question.selectedTask.children) && question.selectedTask.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
+                  <div *ngIf="question.selectedTask.output || question.selectedTask.children">
+                    <div *ngIf="question.selectedTask.output" style="margin-bottom: 16px;">output: {{question.selectedTask.output}}</div>
+                   
+                    <div *ngIf="question.selectedTask.children">
+                      <nz-collapse nzExpandIconPosition="right">
+                        <nz-collapse-panel *ngFor="let childItem of question.selectedTask.children;let index = index" [nzHeader]="childrenTitleComponent" [nzActive]="index == 0">
+                          <ng-template #childrenTitleComponent>
+                            <div style="display: block;">
+                              <div style="background: #202932;">
+                                Step {{index+1}}: 
+                                <span nz-icon *ngIf="childItem.status == 'In Progress'" style="margin: 0 4px;" [nzType]="'loading'"></span>
+                                <span nz-icon *ngIf="childItem.status == 'Need to check'" style="color: rgb(255,205,0);margin: 0 4px;" nzType="exclamation-circle" nzTheme="fill"></span>
+                                <span nz-icon nzType="check-circle" style="color: green;margin: 0 4px;" *ngIf="childItem.status == 'Finished'"  nzTheme="fill"></span>
+                                <span nz-icon nzType="clock-circle" style="margin: 0 4px;" *ngIf="childItem.status == 'Waiting'"nzTheme="outline"></span>
+                                <span nz-icon nzType="close-circle" *ngIf="childItem.status == 'Failed'" style="color: rgb(255,73,68);margin: 0 4px;" nzTheme="fill"></span>
+                                {{childItem.name}}
+                                
+                              </div>
+                              <div style="font-size: 12px;">
+                                Start Time: {{childItem.startTime}}
+                              </div>
+                              <div *ngIf="childItem.finishTime" style="font-size: 12px;">
+                                Finish Time: {{childItem.finishTime}}
+                              </div>
+                            </div>
+                          </ng-template>
+                          <div *ngIf="childItem.output">Anaylsis Content: {{childItem.output}}</div>
+                          <nz-spin nzSize="large" *ngIf="!childItem.output || childItem.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
+                        </nz-collapse-panel>
+                      </nz-collapse>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div *ngIf="questionModalTitle == 'Answer Question'">
+            <div>
+              <input nz-input [(ngModel)]="questionModalAnswer" />
+              <button style="margin-left: 16px;" (click)="answerQuestion()" nz-button nzType="primary">Answer</button>
+
+            </div>
+          </div>
+        </ng-container>
+      </nz-modal>
+      <nz-modal  [nzContent]="createModalContent" [nzFooter]="null" [(nzVisible)]="createModalVisible" nzTitle="Create Process" (nzOnCancel)="handleCreateModalCancel()">
+        <ng-template #createModalContent>
+          
+          <div style="display: flex;align-items: center;">
+            <textarea
+              nz-input [(ngModel)]="createQuestion"
+              [nzAutosize]="{ minRows: 3, maxRows: 3 }"
+            ></textarea>
+            <button style="margin-left: 16px;" (click)="createQuestionClick()" nz-button nzType="primary">Create</button>
+
+          </div>
+        </ng-template>
+      </nz-modal>
+    </div>
+  </div>
+</div>

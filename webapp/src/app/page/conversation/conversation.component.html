@@ -1,0 +1,99 @@
+<div class="container">
+  
+  <div class="conversation-container" [style]="collapseMenu? 'width: 100%': 'width: 100%'">
+    <div class="github-issue-container">
+      <div class="github-issue-left-part">
+        <span class="status" nz-icon *ngIf="!getIssueStatus && startIssueRefresh" [nzType]="'loading'"></span>
+        <span class="status" nz-icon nzType="check-circle" *ngIf="getIssueStatus && startIssueRefresh"></span>
+        <span class="github-issue-title" *ngIf="!getIssueStatus && startIssueRefresh"> Loading Github Issue List</span>
+        <span class="github-issue-title" *ngIf="getIssueStatus && startIssueRefresh"> Has loaded {{issueList.length}} Github Issues</span>
+
+
+
+      </div>
+      <div class="github-issue-right-part">
+        <button style="margin-right: 16px;border-radius: 0 !important;" *ngIf="!startIssueRefresh" nzSize="small" (click)="startLoadIssue()" nz-button nzType="primary">Start Load Issue</button>
+        <button style="margin-right: 16px;border-radius: 0 !important; " *ngIf="startIssueRefresh" nzSize="small" (click)="endLoadIssue()" nz-button nzType="primary">End Load Issue</button>
+
+
+      </div>
+    </div>
+    <div class="conversation-title">
+      <div class="conversation-title-content">
+        <img src="assets/robot.svg">
+        <div class="title">{{selectedUser.name}}</div>
+        <span class="status" nz-icon *ngIf="selectedUser.status == 'In Progress'" [nzType]="'loading'"></span>
+        <span class="status"  nz-icon nzType="check-circle" style="color: green;" *ngIf="selectedUser.status == 'Online'"  nzTheme="fill"></span>
+        <span class="status"  nz-icon nzType="clock-circle" *ngIf="selectedUser.status == 'Offline'"nzTheme="outline"></span>
+        <div style="margin-left: 8px;padding-top: 22px;font-weight: bold;">{{selectedUser.status}}</div>
+      </div>
+      
+    </div>
+    <div class="conversation-content">
+      <div *ngFor="let conversation of conversationList;let conversationIndex = index" class="conversation-item">
+        <div *ngIf="conversation.person == 'user'" class="conversation-item-container">
+          <div class="conversation-item-logo">
+            <img src="assets/user.svg" />
+          </div>
+          <div class="conversation-item-content">
+            <div class="conversation-item-content-text">{{conversation.response}}</div>
+          </div>
+        </div>
+        <div *ngIf="conversation.person != 'user'" class="conversation-item-container">
+          <div class="conversation-item-logo">
+            <img src="assets/robot.svg" />
+          </div>
+          <div class="conversation-item-content">
+            <nz-spin nzSize="large" *ngIf="conversation.task && conversation.task.length == 0" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
+            <div class="conversation-item-content-task" *ngIf="conversation.task && conversation.task.length > 0">
+              <div class="conversation-item-content-text" *ngIf="(!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].output != ''">{{conversation.task[0].output}}</div>
+
+              <div class="conversation-item-content-task-list"  *ngIf="!((!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].output != '')">
+                <div *ngFor="let task of conversation.task; let index = index"  (click)="selectTask(task,conversation,index)" [class]="'conversation-item-content-task-item' + (task.selected?' select': (task.status != 'Waiting'? ' pointer': ''))">
+                  <span nz-icon *ngIf="task.status == 'In Progress'" [nzType]="'loading'"></span>
+                  <span nz-icon *ngIf="task.status == 'Need to check'" style="color: rgb(255,205,0);" nzType="exclamation-circle" nzTheme="fill"></span>
+                  <span nz-icon nzType="check-circle" style="color: green;" *ngIf="task.status == 'Finished'"  nzTheme="fill"></span>
+                  <span nz-icon nzType="clock-circle" *ngIf="task.status == 'Waiting'"nzTheme="outline"></span>
+                  <span nz-icon nzType="close-circle" *ngIf="task.status == 'Failed'" style="color: rgb(255,73,68);" nzTheme="fill"></span>
+                  <span style="margin-left: 8px;font-weight: bold;">Step {{index + 1}}: {{task.name}}</span>
+                  <div class="conversation-item-content-task-time">
+                    <div style="width: 200px;font-size: 10px;color: #979797;">{{task.description}}</div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="conversation-item-content-task-detail"  *ngIf="conversation.selectedTask">
+              <nz-spin nzSize="large" *ngIf="!(conversation.selectedTask.output || conversation.selectedTask.children) && conversation.selectedTask.status=='In Progress'" nzSimple style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;"></nz-spin>
+              <div *ngIf="conversation.selectedTask.output || conversation.selectedTask.input || conversation.selectedTask.summary || conversation.selectedTask.children">
+                
+                <div *ngIf="conversation.selectedTask.children && conversation.selectedTask.children.length > 0">
+                  <app-task [parentIndex]="conversation.selectIndex + '-'" [children]="conversation.selectedTask.children" (selectChange)="changeSelectedIndex($event,conversationIndex)"></app-task>
+                
+                </div>
+                <nz-collapse *ngIf="conversation.selectedTask.output || conversation.selectedTask.summary || conversation.selectedTask.input" [nzBordered]="false">
+                  <nz-collapse-panel nzHeader="Summary" *ngIf="conversation.selectedTask.summary" [nzActive]="true">
+                    <pre *ngIf="conversation.selectedTask.summary" style="margin-bottom: 16px;white-space: pre-wrap;font-size: 10px;">{{conversation.selectedTask.summary}}</pre>
+                  </nz-collapse-panel>
+                  <nz-collapse-panel nzHeader="Input" *ngIf="conversation.selectedTask.input" [nzActive]="false">
+                    <pre *ngIf="conversation.selectedTask.input" style="margin-bottom: 16px;white-space: pre-wrap;font-size: 10px;">{{conversation.selectedTask.input}}</pre>
+                  </nz-collapse-panel>
+                  <nz-collapse-panel nzHeader="Output" *ngIf="conversation.selectedTask.output" [nzActive]="false">
+                    <pre *ngIf="conversation.selectedTask.output" style="margin-bottom: 16px;white-space: pre-wrap;font-size: 10px;">{{conversation.selectedTask.output}}</pre>
+                  </nz-collapse-panel>
+                </nz-collapse>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="answer-question">
+      <input nz-input (keyup.enter)="submit()" [(ngModel)]="answer" [disabled]="selectedUser.status == 'In Progress'" />
+      <img style="width: 23px;margin-left: 16px;cursor: pointer;" *ngIf="selectedUser.status != 'In Progress'" (click)="submit()" src="assets/send.svg"/>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div style="width: 100%;height: 100%">
+  <div class="bar">
+    Dev Agent
+  </div>
+  <div class="content">
+    <div class="silder" *ngIf="path != '/conversation'">
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+          <li *ngFor="let item of navigator" nz-menu-item [nzSelected]="item.selected" (click)="navigateTo(item.path)">{{item.label}}</li>
+        </ul>
+
+    </div>
+    <div [class]="path != '/conversation'?'container':'whole-container'">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="bar">
+    
+  </div>
+</div>
