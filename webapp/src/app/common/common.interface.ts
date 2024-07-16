@@ -11,6 +11,7 @@ export interface IISSUE{
   number: number;
   title: string;
   body: string;
+  repo: string;
 }
 export interface IROBOT{
   id: number;

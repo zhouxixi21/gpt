@@ -19,7 +19,8 @@ def get_issue_list():
             f.close()
     issues_assign_to_me = user.get_issues(filter='assigned', state='open')
     for issue in issues_assign_to_me:
-        issue_format = {'id': issue.id, 'number': issue.number, 'title': issue.title, 'body': issue.body}
+        print(issue.repository.full_name)
+        issue_format = {'id': issue.id, 'repo': issue.repository.full_name,'number': issue.number, 'title': issue.title, 'body': issue.body}
         if issue_format not in has_processed_issue_list:
             issue_list.append(issue_format)
             has_processed_issue_list.append(issue_format)
@@ -28,3 +29,7 @@ def get_issue_list():
         file.close()
     return issue_list
 
+
+
+if __name__ == '__main__':
+    print(get_issue_list())
