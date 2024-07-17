@@ -217,7 +217,7 @@ export class ConversationComponent implements OnInit{
     }
     question.selectedTask = task
     question.selectIndex = index + 1
-    this.selectedIndex.push(question.selectIndex + '-' + (index + 1))
+    this.selectedIndex.push('1-' + (index + 1))
     question.task?.forEach((taskItem)=>{
       if(task.id == taskItem.id){
         taskItem.selected = true
