@@ -127,6 +127,9 @@ export class ConversationComponent implements OnInit{
     }
   }
   formatConversation(conversationListInput:Array<ISHOWQUESTION>){
+    console.log(JSON.parse(JSON.stringify(conversationListInput)))
+    console.log(this.selectedIndex)
+
     if(this.selectedIndex.length > 0){
       let selectConversationIndex = parseInt(this.selectedIndex[0].split('-')[0])
       let selectTaskIndex = parseInt(this.selectedIndex[0].split('-')[1]) - 1
@@ -214,6 +217,7 @@ export class ConversationComponent implements OnInit{
     }
     question.selectedTask = task
     question.selectIndex = index + 1
+    this.selectedIndex.push(question.selectIndex + '-' + (index + 1))
     question.task?.forEach((taskItem)=>{
       if(task.id == taskItem.id){
         taskItem.selected = true
