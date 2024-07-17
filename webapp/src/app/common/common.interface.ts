@@ -6,7 +6,6 @@ export interface IPROCESS{
   description: string;
   status: ISTATUS;
 }
-<<<<<<< HEAD
 export interface IISSUE{
   id: number;
   number: number;
@@ -14,8 +13,6 @@ export interface IISSUE{
   body: string;
   repo: string;
 }
-=======
->>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
 export interface IROBOT{
   id: number;
   name: string;

@@ -1,26 +1,6 @@
 <div class="container">
   
   <div class="conversation-container" [style]="collapseMenu? 'width: 100%': 'width: 100%'">
-<<<<<<< HEAD
-    <div class="github-issue-container">
-      <div class="github-issue-left-part">
-        <span class="status" nz-icon *ngIf="!getIssueStatus && startIssueRefresh" [nzType]="'loading'"></span>
-        <span class="status" nz-icon nzType="check-circle" *ngIf="getIssueStatus && startIssueRefresh"></span>
-        <span class="github-issue-title" *ngIf="!getIssueStatus && startIssueRefresh"> Loading Github Issue List</span>
-        <span class="github-issue-title" *ngIf="getIssueStatus && startIssueRefresh"> Has loaded {{issueList.length}} Github Issues</span>
-
-
-
-      </div>
-      <div class="github-issue-right-part">
-        <button style="margin-right: 16px;border-radius: 0 !important;" *ngIf="!startIssueRefresh" nzSize="small" (click)="startLoadIssue()" nz-button nzType="primary">Start Load Issue</button>
-        <button style="margin-right: 16px;border-radius: 0 !important; " *ngIf="startIssueRefresh" nzSize="small" (click)="endLoadIssue()" nz-button nzType="primary">End Load Issue</button>
-
-
-      </div>
-    </div>
-=======
->>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
     <div class="conversation-title">
       <div class="conversation-title-content">
         <img src="assets/robot.svg">

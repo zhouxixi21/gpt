@@ -1,13 +1,7 @@
 import { Injectable } from "@angular/core";
-<<<<<<< HEAD
 import { IISSUE, IPROCESS, IPROCESSDETAIL, IROBOT, ISHOWQUESTION } from "../common/common.interface";
 import { HttpClient } from "@angular/common/http";
 import { GET_ISSUE_URL, GET_NODE_URL, NODE_DETAIL_URL, NODE_LIST_URL, SEND_MESSAGE_URL } from "./apis.constant";
-=======
-import { IPROCESS, IPROCESSDETAIL, IROBOT, ISHOWQUESTION } from "../common/common.interface";
-import { HttpClient } from "@angular/common/http";
-import { GET_NODE_URL, NODE_DETAIL_URL, NODE_LIST_URL, SEND_MESSAGE_URL } from "./apis.constant";
->>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
 
 @Injectable({
   providedIn: 'root'
@@ -48,15 +42,12 @@ export class GPTService {
     });
 
   }
-<<<<<<< HEAD
   async getIssueList():Promise<Array<IISSUE>>{
     let res:any = await this.httpClient.get(GET_ISSUE_URL).toPromise()
     return new Promise((resolve, reject) => {
       resolve(res.data)
     })
   }
-=======
->>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
   getProcess(id: number):Promise<IPROCESSDETAIL> {
     return new Promise((resolve, reject) => {
       if(id == 1){
@@ -310,13 +301,8 @@ export class GPTService {
       resolve(res.data)
     })
   }
-<<<<<<< HEAD
   async sendMessage(id: number,message: string, issue: string, repo: string){
     let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{node_id: id, message: message, issue: issue, repo: repo}).toPromise()
-=======
-  async sendMessage(id: number,message: string){
-    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{node_id: id, message: message}).toPromise()
->>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
     return new Promise((resolve, reject) => {
       resolve(res.data)
     })
