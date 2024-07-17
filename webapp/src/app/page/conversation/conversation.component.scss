@@ -1,3 +1,20 @@
+.github-icon{
+  width: 30px;
+  height: 30px; 
+}
+.github-icon-jump{
+  width: 30px;
+  height: 30px; 
+  animation: bounce 1s infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
 .container{
   width: 100%;
   height: 100%;

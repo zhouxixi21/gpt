@@ -23,7 +23,7 @@ def send_email(node_id, message, issue, repo):
     })
     # TO DO
     # call api for gpt
-    requests.post('http://localhost:8000/develop', json.dumps(content[len(content)-1]))
     with open(file_path, "w") as file:
         json.dump(content, file, indent=4)
         file.close()
+    requests.post('http://localhost:8000/develop', json.dumps(content[len(content)-1]))

@@ -9,6 +9,11 @@
         <span class="status"  nz-icon nzType="check-circle" style="color: green;" *ngIf="selectedUser.status == 'Online'"  nzTheme="fill"></span>
         <span class="status"  nz-icon nzType="clock-circle" *ngIf="selectedUser.status == 'Offline'"nzTheme="outline"></span>
         <div style="margin-left: 8px;padding-top: 22px;font-weight: bold;">{{selectedUser.status}}</div>
+        
+      </div>
+      <div class="conversation-github">
+        <img class="github-icon-jump" title="loading issue now... please wait" *ngIf="startIssueRefresh" src="assets/github.svg">
+        <img class="github-icon" title="loading issue now... please wait" *ngIf="!startIssueRefresh" src="assets/github.svg">
       </div>
       
     </div>

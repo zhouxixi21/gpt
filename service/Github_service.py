@@ -3,7 +3,7 @@ import os
 
 from github import Github
 
-from datagpt.constant.Path_constant import Path_constant
+from constant.Path_constant import Path_constant
 
 
 def get_issue_list():
