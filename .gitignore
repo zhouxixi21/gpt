@@ -1,4 +1,6 @@
 /webapp/.angular/
-/webapp/dist/
 /webapp/node_modules/
 /controller/__pycache__
+/service/__pycache__/
+/log/
+constant/__pycache__

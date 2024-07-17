@@ -6,6 +6,7 @@ from constant.Path_constant import Path_constant
 
 
 def send_email(node_id, message, issue, repo):
+
     message_id = str(uuid.uuid1())
     file_path = Path_constant.NODE_CONVERSATION_FILE_PATH.replace("<placeholder>", str(node_id))
     if os.path.exists(file_path):

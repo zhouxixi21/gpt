@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NzMessageService } from 'ng-zorro-antd/message';
+<<<<<<< HEAD
 import { IISSUE, IROBOT, ISHOWQUESTION, ISHOWROBOT, ISHOWTASK } from 'src/app/common/common.interface';
+=======
+import { IROBOT, ISHOWQUESTION, ISHOWROBOT, ISHOWTASK } from 'src/app/common/common.interface';
+>>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
 import { GPTService } from 'src/app/service/gpt.service';
 
 @Component({
@@ -15,11 +19,15 @@ export class ConversationComponent implements OnInit{
   collapseMenu = false
   selectedIndex: Array<string> = []
   answer = ''
+<<<<<<< HEAD
   startIssueRefresh:boolean = false
   getIssueStatus: boolean = false
   issueList: Array<IISSUE> = []
   refreshEvent:any = {}
   refreshIssueEvent: any = {}
+=======
+  refreshEvent:any = {}
+>>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
   selectedUser: ISHOWROBOT = {
     id: -1,
     name: '',
@@ -29,6 +37,7 @@ export class ConversationComponent implements OnInit{
   ngOnInit(): void {
     this.initData(0)
   }
+<<<<<<< HEAD
   async loadIssue(){
     let res = await this.gptService.getIssueList()
     console.log(res)
@@ -72,6 +81,8 @@ export class ConversationComponent implements OnInit{
       this.loadIssue()
     }, 10000)
   }
+=======
+>>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
   changeCollapseMenu(){
     this.collapseMenu = !this.collapseMenu
   }
@@ -127,9 +138,12 @@ export class ConversationComponent implements OnInit{
     }
   }
   formatConversation(conversationListInput:Array<ISHOWQUESTION>){
+<<<<<<< HEAD
     console.log(JSON.parse(JSON.stringify(conversationListInput)))
     console.log(this.selectedIndex)
 
+=======
+>>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
     if(this.selectedIndex.length > 0){
       let selectConversationIndex = parseInt(this.selectedIndex[0].split('-')[0])
       let selectTaskIndex = parseInt(this.selectedIndex[0].split('-')[1]) - 1
@@ -217,7 +231,10 @@ export class ConversationComponent implements OnInit{
     }
     question.selectedTask = task
     question.selectIndex = index + 1
+<<<<<<< HEAD
     this.selectedIndex.push('1-' + (index + 1))
+=======
+>>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
     question.task?.forEach((taskItem)=>{
       if(task.id == taskItem.id){
         taskItem.selected = true
@@ -248,7 +265,11 @@ export class ConversationComponent implements OnInit{
   }
   submit(){
     if(this.answer && this.selectedUser.status != 'In Progress'){
+<<<<<<< HEAD
       this.gptService.sendMessage(this.selectedUser.id,this.answer,this.answer, '').then(data=>{
+=======
+      this.gptService.sendMessage(this.selectedUser.id,this.answer).then(data=>{
+>>>>>>> 3306681168be7baf3f273766e466e8866741e7ad
         this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
           this.initData(0)
         })
