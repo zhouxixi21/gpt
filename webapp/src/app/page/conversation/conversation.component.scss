@@ -2,8 +2,11 @@
   width: 30px;
   height: 30px; 
 }
+.conversation-github{
+  display: grid;
+  align-content: center;
+}
 .github-icon-jump{
-  margin-top: 12px;
   width: 30px;
   height: 30px; 
   animation: bounce 1s infinite;
@@ -88,7 +91,7 @@
     overflow: hidden;
     .conversation-title{
       height: 60px;
-      padding: 4px 16px;
+      padding: 4px 33px 4px 32px;
       width: 100%;
       background: #171616b5;
       display: flex;
@@ -97,17 +100,21 @@
         display: flex;
         img{
           width: 37px;
+          height: 46px;
         }
         .title{
           font-size: 22px;
+          display: grid;
+          align-content: center;
           margin: 0 16px;
-          padding-top: 12px;
           font-weight: bolder;
           
         }
         .status{
-          padding-top: 26px;
+          display: grid;
+          align-content: center;
         }
+        
       }
       .conversation-title-operation{
         padding-top: 10px;
@@ -115,8 +122,8 @@
       }
     }
     .conversation-content{
-      padding: 32px 64px;
-      height: calc(100% - 183px);
+      padding: 32px;
+      height: calc(100% - 130px);
       margin-bottom: 20px;
       overflow: auto;
       .conversation-item{
@@ -173,7 +180,7 @@
     }
     .answer-question{
       width: 100%;
-      padding: 0 64px 32px 64px;
+      padding: 0 32px;
     
       display: flex;
     }

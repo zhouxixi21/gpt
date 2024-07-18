@@ -8,7 +8,7 @@
         <span class="status" nz-icon *ngIf="selectedUser.status == 'In Progress'" [nzType]="'loading'"></span>
         <span class="status"  nz-icon nzType="check-circle" style="color: green;" *ngIf="selectedUser.status == 'Online'"  nzTheme="fill"></span>
         <span class="status"  nz-icon nzType="clock-circle" *ngIf="selectedUser.status == 'Offline'"nzTheme="outline"></span>
-        <div style="margin-left: 8px;padding-top: 22px;font-weight: bold;">{{selectedUser.status}}</div>
+        <div style="margin-left: 8px;display: grid;align-content: center;font-weight: bold;">{{selectedUser.status}}</div>
         
       </div>
       <div class="conversation-github">
