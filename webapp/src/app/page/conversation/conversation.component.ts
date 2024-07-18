@@ -28,7 +28,11 @@ export class ConversationComponent implements OnInit{
   }
   ngOnInit(): void {
     this.startLoadIssue()
-    this.initData(0)
+    this.loadData(0)
+    this.refreshEvent = setInterval(()=>{
+      
+      this.loadData(0)
+    }, 5000)  
   }
   async loadIssue(){
     let res = await this.gptService.getIssueList()
@@ -49,7 +53,7 @@ export class ConversationComponent implements OnInit{
           name = this.selectedUser.name
           this.gptService.sendMessage(id,answer,issue,repo).then(data=>{
             this.message.success('Github issue has assign to ' + name + '!').onClose.subscribe(item=>{
-              this.initData(0)
+              this.loadData(0)
             })
           })
         }
@@ -68,7 +72,6 @@ export class ConversationComponent implements OnInit{
     this.startIssueRefresh = true
     this.getIssueStatus = false
     this.issueList = []
-    clearInterval(this.refreshIssueEvent)
     this.refreshIssueEvent = setInterval(()=>{
       this.loadIssue()
     }, 5000)
@@ -78,15 +81,7 @@ export class ConversationComponent implements OnInit{
   }
   currentIndex = 1
   constructor(private gptService: GPTService, private message: NzMessageService) { }
-  initData(selectIndex:number){
-    this.loadData(selectIndex)
-    clearInterval(this.refreshEvent)
-    this.refreshEvent = setInterval(()=>{
-      
-      this.loadData(selectIndex)
-    }, 5000)
-    
-  }
+  
   loadData(selectIndex: number){
     this.gptService.getRobotList().then((res)=>{
       let currentStatus = 'In Progress'
@@ -238,16 +233,16 @@ export class ConversationComponent implements OnInit{
   selectUser(user:ISHOWROBOT){
     let selectIndex = this.userList.findIndex(item=>{return item.id == user.id})
     if(selectIndex != -1){
-      this.initData(selectIndex)
+      this.loadData(selectIndex)
     } else {
-      this.initData(0)
+      this.loadData(0)
     }
   }
   submit(){
     if(this.answer && this.selectedUser.status != 'In Progress'){
       this.gptService.sendMessage(this.selectedUser.id,this.answer,this.answer, '').then(data=>{
         this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
-          this.initData(0)
+          this.loadData(0)
         })
       })
     }
