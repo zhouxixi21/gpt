@@ -52,7 +52,6 @@ export class ConversationComponent implements OnInit{
               this.initData(0)
             })
           })
-          clearInterval(this.refreshIssueEvent)
         }
         
       }
@@ -69,6 +68,7 @@ export class ConversationComponent implements OnInit{
     this.startIssueRefresh = true
     this.getIssueStatus = false
     this.issueList = []
+    clearInterval(this.refreshIssueEvent)
     this.refreshIssueEvent = setInterval(()=>{
       this.loadIssue()
     }, 5000)
@@ -80,6 +80,7 @@ export class ConversationComponent implements OnInit{
   constructor(private gptService: GPTService, private message: NzMessageService) { }
   initData(selectIndex:number){
     this.loadData(selectIndex)
+    clearInterval(this.refreshEvent)
     this.refreshEvent = setInterval(()=>{
       
       this.loadData(selectIndex)
@@ -111,9 +112,7 @@ export class ConversationComponent implements OnInit{
       this.gptService.getConversation(this.userList[selectIndex].id).then((res:Array<ISHOWQUESTION>)=>{
         this.formatConversation(res)
         this.conversationList = res
-        if(currentStatus == 'Online'){
-          clearInterval(this.refreshEvent)
-        }
+        
       })
 
     })
@@ -128,9 +127,6 @@ export class ConversationComponent implements OnInit{
     }
   }
   formatConversation(conversationListInput:Array<ISHOWQUESTION>){
-    console.log(JSON.parse(JSON.stringify(conversationListInput)))
-    console.log(this.selectedIndex)
-
     if(this.selectedIndex.length > 0){
       let selectConversationIndex = parseInt(this.selectedIndex[0].split('-')[0])
       let selectTaskIndex = parseInt(this.selectedIndex[0].split('-')[1]) - 1
