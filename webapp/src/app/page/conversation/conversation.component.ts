@@ -71,7 +71,7 @@ export class ConversationComponent implements OnInit{
     this.issueList = []
     this.refreshIssueEvent = setInterval(()=>{
       this.loadIssue()
-    }, 10000)
+    }, 5000)
   }
   changeCollapseMenu(){
     this.collapseMenu = !this.collapseMenu
@@ -83,7 +83,7 @@ export class ConversationComponent implements OnInit{
     this.refreshEvent = setInterval(()=>{
       
       this.loadData(selectIndex)
-    }, 10000)
+    }, 5000)
     
   }
   loadData(selectIndex: number){
