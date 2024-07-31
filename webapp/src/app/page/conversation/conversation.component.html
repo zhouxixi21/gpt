@@ -37,7 +37,7 @@
               <div class="conversation-item-content-text" *ngIf="(!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].output != ''">{{conversation.task[0].output}}</div>
 
               <div class="conversation-item-content-task-list"  *ngIf="!((!conversation.task[0].children || conversation.task[0].children.length == 0) && conversation.task[0].name == '' && conversation.task[0].output != '')">
-                <div *ngFor="let task of conversation.task; let index = index"  (click)="selectTask(task,conversation,index)" [class]="'conversation-item-content-task-item' + (task.selected?' select': (task.status != 'Waiting'? ' pointer': ''))">
+                <div *ngFor="let task of conversation.task; let index = index"  (click)="selectTask(task,conversation,conversationIndex,index)" [class]="'conversation-item-content-task-item' + (task.selected?' select': (task.status != 'Waiting'? ' pointer': ''))">
                   <span nz-icon *ngIf="task.status == 'In Progress'" [nzType]="'loading'"></span>
                   <span nz-icon *ngIf="task.status == 'Need to check'" style="color: rgb(255,205,0);" nzType="exclamation-circle" nzTheme="fill"></span>
                   <span nz-icon nzType="check-circle" style="color: green;" *ngIf="task.status == 'Finished'"  nzTheme="fill"></span>

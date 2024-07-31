@@ -12,7 +12,6 @@ export class TaskComponent{
   @Input('children')
   set setChildren(childrenInput: Array<ISHOWTASK>){
     this.children = childrenInput
-    console.log(this.children)
   }
   @Input() parentIndex: string = ''
   @Output() selectChange = new EventEmitter()
