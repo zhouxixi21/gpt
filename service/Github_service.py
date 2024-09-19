@@ -19,8 +19,8 @@ def get_issue_list():
             f.close()
     issues_assign_to_me = user.get_issues(filter='assigned', state='open')
     for issue in issues_assign_to_me:
-        print(issue.repository.full_name)
-        issue_format = {'id': issue.id, 'repo': issue.repository.full_name,'number': issue.number, 'title': issue.title, 'body': issue.body}
+        print(issue.repository.clone_url)
+        issue_format = {'id': issue.id, 'repo': issue.repository.full_name,'number': issue.number, 'title': issue.title, 'path':issue.repository.clone_url, 'body': issue.body}
         if issue_format not in has_processed_issue_list:
             issue_list.append(issue_format)
             has_processed_issue_list.append(issue_format)
