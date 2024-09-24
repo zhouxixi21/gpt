@@ -3,6 +3,19 @@
   <div class="conversation-container" [style]="collapseMenu? 'width: 100%': 'width: 100%'">
     <div class="conversation-title">
       <div class="conversation-title-content">
+        <button style="margin: auto 8px auto 0;border:none !important;padding-left:0px !important" nz-button nz-dropdown [nzDropdownMenu]="menu" *ngIf="completeList.length > 0 || inProgressList.length > 0">
+          <span nz-icon nzType="menu" nzTheme="outline"></span>
+        </button>
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-submenu nzTitle="Completed List">
+            <li nz-menu-item (click)="selectUser(completeItem)" *ngFor="let completeItem of completeList">{{completeItem.name}}</li>
+            
+          </ul>
+          <ul nz-submenu nzTitle="In Progress List" *ngIf="inProgressList.length > 0">
+            <li nz-menu-item (click)="selectUser(inProgressItem)" *ngFor="let inProgressItem of inProgressList">{{inProgressItem.name}}</li>
+            
+          </ul>
+        </nz-dropdown-menu>
         <img src="assets/robot.svg">
         <div class="title">{{selectedUser.name}}</div>
         <span class="status" nz-icon *ngIf="selectedUser.status == 'In Progress'" [nzType]="'loading'"></span>

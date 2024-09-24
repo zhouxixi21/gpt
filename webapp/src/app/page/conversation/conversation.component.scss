@@ -2,6 +2,12 @@
   width: 30px;
   height: 30px; 
 }
+.ant-dropdown-menu-submenu-title {
+  background: #202932 !important;
+}
+.ant-dropdown-menu{
+  background: #202932 !important;
+}
 .conversation-github{
   display: grid;
   align-content: center;
@@ -87,6 +93,7 @@
       
     }
   }
+
   .conversation-container{
     overflow: hidden;
     .conversation-title{

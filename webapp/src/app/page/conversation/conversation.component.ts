@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NzMessageService } from 'ng-zorro-antd/message';
 import { IISSUE, IROBOT, ISHOWQUESTION, ISHOWROBOT, ISHOWTASK } from 'src/app/common/common.interface';
 import { GPTService } from 'src/app/service/gpt.service';
+import { StorageService } from 'src/app/service/storage.service';
 
 @Component({
   selector: 'app-conversation',
@@ -14,6 +15,9 @@ export class ConversationComponent implements OnInit{
   conversationList: Array<ISHOWQUESTION> = []
   collapseMenu = false
   selectedIndex: Array<string> = []
+  selectId: string | undefined = undefined
+  completeList:any[] = []
+  inProgressList:any[] = []
   answer = ''
   startIssueRefresh:boolean = false
   getIssueStatus: boolean = false
@@ -21,16 +25,17 @@ export class ConversationComponent implements OnInit{
   refreshEvent:any = {}
   refreshIssueEvent: any = {}
   selectedUser: ISHOWROBOT = {
-    id: -1,
+    id: '',
     name: '',
     status: '',
     lastMessage: '',
   }
   ngOnInit(): void {
     this.startLoadIssue()
-    this.loadData(0)
+    
+    this.loadData(this.selectId)
     this.refreshEvent = setInterval(()=>{
-      this.loadData(0)
+      this.loadData(this.selectId)
     }, 5000)  
   }
   async loadIssue(){
@@ -41,7 +46,7 @@ export class ConversationComponent implements OnInit{
       this.getIssueStatus = true
       this.issueList = res
       for (let index = 0; index < res.length; index++) {
-        let id = -1
+        let id = ''
         let name = ''
         let answer = res[index].body
         let issue  = res[index].title
@@ -49,9 +54,9 @@ export class ConversationComponent implements OnInit{
         if(this.selectedUser.status == 'Online'){
           id = this.selectedUser.id
           name = this.selectedUser.name
-          this.gptService.sendMessage(id,answer,issue,repo).then(data=>{
+          this.gptService.sendMessage(answer,issue,repo).then(data=>{
             this.message.success('Github issue has assign to ' + name + '!').onClose.subscribe(item=>{
-              this.loadData(0)
+              this.loadData(this.selectId)
             })
           })
         }
@@ -80,26 +85,36 @@ export class ConversationComponent implements OnInit{
   currentIndex = 1
   constructor(private gptService: GPTService, private message: NzMessageService) { }
   
-  loadData(selectIndex: number){
+  loadData(selectId: string | undefined){
     this.gptService.getRobotList().then((res)=>{
-      let currentStatus = 'In Progress'
+      if(selectId == undefined){
+        selectId = res[res.length - 1].id
+      }
+      this.completeList = []
+      this.inProgressList = []
+      let selectIndex = 0
       this.userList = res.map((robot: IROBOT, index: number) => {
-        if(index == selectIndex) {
+        if(robot.status == 'Online'){
+          this.completeList.push(robot)
+        } else {
+          this.inProgressList.push(robot)
+        }
+        if(robot.id == selectId) {
+          selectIndex = index
           this.selectedUser = {
             id: robot.id,
             name: robot.name,
             status: robot.status,
             lastMessage: robot.lastMessage,
-            selected: index == selectIndex
+            selected: robot.id == selectId
           }
-          currentStatus = robot.status
         }
         return {
           id: robot.id,
           name: robot.name,
           status: robot.status,
           lastMessage: robot.lastMessage,
-          selected: index == selectIndex
+          selected: robot.id == selectId
         }
       }); 
       this.gptService.getConversation(this.userList[selectIndex].id).then((res:Array<ISHOWQUESTION>)=>{
@@ -237,19 +252,15 @@ export class ConversationComponent implements OnInit{
   }
 
   selectUser(user:ISHOWROBOT){
-    let selectIndex = this.userList.findIndex(item=>{return item.id == user.id})
-    if(selectIndex != -1){
-      this.loadData(selectIndex)
-    } else {
-      this.loadData(0)
-    }
+    this.selectId = user.id
+    this.loadData(this.selectId)
   }
   submit(){
     if(this.answer && this.selectedUser.status != 'In Progress'){
-      this.gptService.sendMessage(this.selectedUser.id,this.answer,this.answer, '').then(data=>{
+      this.gptService.sendMessage(this.answer,this.answer, '').then(data=>{
         this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
           this.answer = ''
-          this.loadData(0)
+          this.loadData(this.selectId)
         })
       })
     }

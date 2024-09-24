@@ -5,12 +5,12 @@ import requests
 from constant.Path_constant import Path_constant
 
 
-def send_email(node_id, message, issue, repo):
+def send_email(message, issue, repo):
 
     message_id = str(uuid.uuid1())
-    file_path = Path_constant.NODE_CONVERSATION_FILE_PATH.replace("<placeholder>", str(node_id))
+    file_path = Path_constant.NODE_CONVERSATION_FILE_PATH
     if os.path.exists(file_path):
-        with open(Path_constant.NODE_CONVERSATION_FILE_PATH.replace("<placeholder>", str(node_id)), 'r') as f:
+        with open(Path_constant.NODE_CONVERSATION_FILE_PATH, 'r') as f:
             content = json.load(f)
             f.close()
     else:

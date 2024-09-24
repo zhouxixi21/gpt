@@ -16,6 +16,7 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
 import { TaskComponent } from 'src/app/component/task/task.component';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { ProcessComponent } from 'src/app/component/process/process.component';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProcessComponent } from 'src/app/component/process/process.component';
   imports: [
     NzBreadCrumbModule,
     ConversationRoutingModule,
+    NzDropDownModule,
     NzButtonModule,
     CommonModule,
     FormsModule,

@@ -1,4 +1,5 @@
 from flask import Blueprint, request
+from flask_cors import cross_origin
 
 from model import Response
 from service import Node_service
@@ -8,18 +9,14 @@ node_controller = Blueprint('node_controller', __name__)
 
 @node_controller.route('/list', methods=['GET'])
 def get_node_list():
-    node_list = [
-        {"id": 3, "name": "Bot 3", "status": "Online", "lastMessage": ""},
-    ]
-    for node_item in node_list:
-        node_item['status'], node_item['lastMessage'] = Node_service.check_status(node_item['id'])
-
+    node_list = Node_service.get_number()
+    print(node_list)
     return Response.success(node_list)
 
 
 @node_controller.route('/get', methods=['GET'])
 def get_node():
-    node_id = request.args.get('node_id')
+    node_id = request.args.get('message_id')
     status, last_message = Node_service.check_status(node_id)
 
     node_item = {"id": node_id, "name": "Bot 1", "status": status, "lastMessage": last_message}
@@ -29,5 +26,5 @@ def get_node():
 
 @node_controller.route('/detail', methods=['GET'])
 def get_node_detail():
-    node_id = request.args.get('node_id')
-    return Response.success(Node_service.get_detail(node_id))
+    message_id = request.args.get('message_id')
+    return Response.success(Node_service.get_detail(message_id))

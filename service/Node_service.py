@@ -109,38 +109,35 @@ def format_task(lines, index, level):
     return edit_input_output(task), len(lines)
 
 
-def check_status(node_id):
-    with open(Path_constant.NODE_CONVERSATION_FILE_PATH.replace("<placeholder>", str(node_id)), 'r') as f:
-        data = json.load(f)
-        if len(data) == 0:
-            return 'Online', ''
-        last_id = data[len(data) - 1]['id']
-        with open(Path_constant.NODE_GPT_FILE_PATH.replace("<placeholder>", str(node_id)), 'r') as gptf:
-            content = gptf.read()
-            lines = content.split('\n')
-            gptf.close()
+def check_status(message_id):
+    with open(Path_constant.NODE_GPT_FILE_PATH.replace("<placeholder>", str(message_id)), 'r') as gptf:
+        content = gptf.read()
+        lines = content.split('\n')
+        gptf.close()
 
-            if '['+str(last_id)+'-end' in content:
-                tasks = []
-                index = 0
+        if '[' + str(message_id) + '-end' in content:
+            tasks = []
+            index = 0
 
-                while len(lines) > index:
-                    task, index = format_task(lines, index, 0)
-                    tasks.append(task)
-                    index += 1
-                output = tasks[len(tasks) - 1]['output']
-                if output == '':
-                    output = ''
-                return 'Online', output
-            else:
-                return 'In Progress', data[len(data) - 1]['content']
+            while len(lines) > index:
+                task, index = format_task(lines, index, 0)
+                tasks.append(task)
+                index += 1
+            output = tasks[len(tasks) - 1]['output']
+            if output == '':
+                output = ''
+            return 'Online', output
+        else:
+            return 'In Progress', ""
 
 
-def get_detail(node_id):
-    with open(Path_constant.NODE_CONVERSATION_FILE_PATH.replace("<placeholder>", str(node_id)), 'r') as f:
+def get_detail(message_id):
+
+    with open(Path_constant.NODE_CONVERSATION_FILE_PATH, 'r') as f:
         content = json.load(f)
+        message_content = [contentItem for contentItem in content if contentItem['id'] == message_id]
         f.close()
-    with open(Path_constant.NODE_GPT_FILE_PATH.replace("<placeholder>", str(node_id)), 'r') as f:
+    with open(Path_constant.NODE_GPT_FILE_PATH.replace("<placeholder>", str(message_id)), 'r') as f:
         lines = f.readlines()
         tasks = []
         index = 0
@@ -151,33 +148,45 @@ def get_detail(node_id):
         f.close()
     response = []
     index = 0
-    while index < len(content):
-        content_id = content[index]['id']
+    response.append({
+        'person': 'user',
+        'response': message_content[0]['content']
+    })
+    task = [task_item for task_item in tasks if task_item['id'] == message_id]
+    if len(task) == 0:
         response.append({
-            'person': 'user',
-            'response': content[index]['content']
+            'person': 'DEV GPT Agent',
+            'response': '',
+            'task': []
         })
-        task = [task_item for task_item in tasks if task_item['id'] == content_id]
-        if len(task) == 0:
-            response.append({
-                'person': 'DEV GPT Agent',
-                'response': '',
-                'task': []
-            })
-        else:
-            show_task = task[0]['children']
-            if task[0]['children'] is None:
-                show_task = task
-            elif len(task[0]['children']) == 0:
-                show_task = task
-            response.append({
-                'person': 'DEV GPT Agent',
-                'response': task[0]['output'],
-                'task': show_task
-            })
-        index += 1
+    else:
+        show_task = task[0]['children']
+        if task[0]['children'] is None:
+            show_task = task
+        elif len(task[0]['children']) == 0:
+            show_task = task
+        response.append({
+            'person': 'DEV GPT Agent',
+            'response': task[0]['output'],
+            'task': show_task
+        })
     return response
 
 
-if __name__ == '__main__':
-    print(json.dumps(get_detail(3), indent=4))
+def get_number():
+    node_list = []
+    with open(Path_constant.NODE_CONVERSATION_FILE_PATH, 'r') as f:
+        content = json.load(f)
+        print(content)
+        index = 1
+        for content_item in content:
+            status, last_message = check_status(content_item['id'])
+
+            node_list.append({
+                'id': content_item['id'],
+                'name': 'Bot' + str(index),
+                'status': status,
+                'lastMessage': last_message
+            })
+            index += 1
+        return node_list

@@ -9,8 +9,7 @@ conversation_controller = Blueprint('conversation_controller', __name__)
 @conversation_controller.route('/send', methods=['POST'])
 def send_message():
     message = request.get_json()['message']
-    node_id = request.get_json()['node_id']
     issue = request.get_json()['issue']
     repo = request.get_json()['repo']
-    Conversation_service.send_email(node_id, message, issue, repo)
+    Conversation_service.send_email(message, issue, repo)
     return Response.success({})

@@ -1,7 +1,7 @@
 
 {
   "/apis/**":{
-    "target": "http://localhost:8080/apis/",
+    "target": "http://localhost:8020/apis/",
       "pathRewrite":{
         "^/apis": "/apis",
         "changeOrigin": true

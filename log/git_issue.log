@@ -1,8 +1,17 @@
 [
     {
-        "id": 2408418517,
+        "id": 2413204806,
+        "repo": "zhouxixi21/gpt",
         "number": 1,
-        "title": "Fix JVM",
-        "body": "Upgrade spring-boot-start-parent library version from 3.1.5 to 3.2.3"
+        "title": "test",
+        "body": "test"
+    },
+    {
+        "id": 2413204806,
+        "repo": "zhouxixi21/gpt",
+        "number": 1,
+        "title": "test",
+        "path": "https://github.com/zhouxixi21/gpt.git",
+        "body": "test"
     }
 ]

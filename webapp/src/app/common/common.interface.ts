@@ -14,7 +14,7 @@ export interface IISSUE{
   repo: string;
 }
 export interface IROBOT{
-  id: number;
+  id: string;
   name: string;
   status: string;
   lastMessage: string;

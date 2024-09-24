@@ -287,22 +287,22 @@ export class GPTService {
     })
     
   }
-  async getNode(node_id: number): Promise<IROBOT>{
-    let res:any = await this.httpClient.get(GET_NODE_URL + '?node_id=' + node_id).toPromise()
+  async getNode(node_id: string): Promise<IROBOT>{
+    let res:any = await this.httpClient.get(GET_NODE_URL + '?message_id=' + node_id).toPromise()
     return new Promise((resolve, reject) => {
       console.log(res)
       resolve(res.data)
     })
     
   }
-  async getConversation(id: number): Promise<Array<ISHOWQUESTION>>{
-    let res:any = await this.httpClient.get(NODE_DETAIL_URL + '?node_id=' + id).toPromise()
+  async getConversation(id: string): Promise<Array<ISHOWQUESTION>>{
+    let res:any = await this.httpClient.get(NODE_DETAIL_URL + '?message_id=' + id).toPromise()
     return new Promise((resolve, reject) => {
       resolve(res.data)
     })
   }
-  async sendMessage(id: number,message: string, issue: string, repo: string){
-    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{node_id: id, message: message, issue: issue, repo: repo}).toPromise()
+  async sendMessage(message: string, issue: string, repo: string){
+    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{message: message, issue: issue, repo: repo}).toPromise()
     return new Promise((resolve, reject) => {
       resolve(res.data)
     })
