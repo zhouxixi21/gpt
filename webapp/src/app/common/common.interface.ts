@@ -12,6 +12,7 @@ export interface IISSUE{
   title: string;
   body: string;
   repo: string;
+  path: string;
 }
 export interface IROBOT{
   id: string;

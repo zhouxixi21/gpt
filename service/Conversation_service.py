@@ -5,7 +5,7 @@ import requests
 from constant.Path_constant import Path_constant
 
 
-def send_email(message, issue, repo):
+def send_email(message, issue, repo, path):
 
     message_id = str(uuid.uuid1())
     file_path = Path_constant.NODE_CONVERSATION_FILE_PATH
@@ -19,7 +19,8 @@ def send_email(message, issue, repo):
         "id": message_id,
         "content": message,
         "issue": issue,
-        "repo": repo
+        "repo": repo,
+        "path": path
     })
     # TO DO
     # call api for gpt

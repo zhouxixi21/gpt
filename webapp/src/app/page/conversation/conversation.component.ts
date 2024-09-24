@@ -51,10 +51,11 @@ export class ConversationComponent implements OnInit{
         let answer = res[index].body
         let issue  = res[index].title
         let repo = res[index].repo
+        let path = res[index].path
         if(this.selectedUser.status == 'Online'){
           id = this.selectedUser.id
           name = this.selectedUser.name
-          this.gptService.sendMessage(answer,issue,repo).then(data=>{
+          this.gptService.sendMessage(answer,issue,repo, path).then(data=>{
             this.message.success('Github issue has assign to ' + name + '!').onClose.subscribe(item=>{
               this.loadData(this.selectId)
             })
@@ -257,7 +258,7 @@ export class ConversationComponent implements OnInit{
   }
   submit(){
     if(this.answer && this.selectedUser.status != 'In Progress'){
-      this.gptService.sendMessage(this.answer,this.answer, '').then(data=>{
+      this.gptService.sendMessage(this.answer,this.answer, '', '').then(data=>{
         this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
           this.answer = ''
           this.loadData(this.selectId)
