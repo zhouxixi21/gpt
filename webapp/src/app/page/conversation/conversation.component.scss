@@ -5,6 +5,13 @@
 .ant-dropdown-menu-submenu-title {
   background: #202932 !important;
 }
+
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected{
+  background-color: #141414 !important;
+}
+.ant-menu-dark .ant-menu-inline.ant-menu-sub{
+  background: #11181f;
+}
 .ant-dropdown-menu{
   background: #202932 !important;
 }

@@ -18,11 +18,13 @@ export class ConversationComponent implements OnInit{
   selectId: string | undefined = undefined
   completeList:any[] = []
   inProgressList:any[] = []
+  originalUserList: any[] = []
   answer = ''
   startIssueRefresh:boolean = false
   getIssueStatus: boolean = false
   issueList: Array<IISSUE> = []
   refreshEvent:any = {}
+  historyMenuOpen = false
   refreshIssueEvent: any = {}
   selectedUser: ISHOWROBOT = {
     id: '',
@@ -37,6 +39,9 @@ export class ConversationComponent implements OnInit{
     this.refreshEvent = setInterval(()=>{
       this.loadData(this.selectId)
     }, 5000)  
+  }
+  openHistoryMenu(event:any){
+    this.historyMenuOpen = event
   }
   async loadIssue(){
     let res = await this.gptService.getIssueList()
@@ -88,41 +93,55 @@ export class ConversationComponent implements OnInit{
   
   loadData(selectId: string | undefined){
     this.gptService.getRobotList().then((res)=>{
-      if(selectId == undefined){
-        selectId = res[res.length - 1].id
-      }
-      this.completeList = []
-      this.inProgressList = []
-      let selectIndex = 0
-      this.userList = res.map((robot: IROBOT, index: number) => {
-        if(robot.status == 'Online'){
-          this.completeList.push(robot)
-        } else {
-          this.inProgressList.push(robot)
+      if(this.originalUserList != res){
+        if(selectId == undefined && res.length > 0){
+          for (let index = 0; index < res.length; index++) {
+            if(res[index].status == 'In Progress'){
+              selectId = res[index].id
+            }
+          }
+          if(selectId == undefined){
+            selectId = res[res.length - 1].id
+          }
         }
-        if(robot.id == selectId) {
-          selectIndex = index
-          this.selectedUser = {
+        this.completeList = []
+        this.inProgressList = []
+        let selectIndex = 0
+        this.userList = res.map((robot: IROBOT, index: number) => {
+          if(robot.status == 'Online'){
+            this.completeList.push(robot)
+          } else {
+            this.inProgressList.push(robot)
+          }
+          if(robot.id == selectId) {
+            selectIndex = index
+            this.selectedUser = {
+              id: robot.id,
+              name: robot.name,
+              status: robot.status,
+              lastMessage: robot.lastMessage,
+              selected: robot.id == selectId
+            }
+          }
+          return {
             id: robot.id,
             name: robot.name,
             status: robot.status,
             lastMessage: robot.lastMessage,
             selected: robot.id == selectId
           }
-        }
-        return {
-          id: robot.id,
-          name: robot.name,
-          status: robot.status,
-          lastMessage: robot.lastMessage,
-          selected: robot.id == selectId
-        }
-      }); 
-      this.gptService.getConversation(this.userList[selectIndex].id).then((res:Array<ISHOWQUESTION>)=>{
-        this.formatConversation(res)
-        this.conversationList = res
-        
-      })
+        }); 
+        this.originalUserList = res
+      }
+     
+      if(res.length > 0 && selectId != undefined){
+        this.gptService.getConversation(selectId).then((res:Array<ISHOWQUESTION>)=>{
+          this.formatConversation(res)
+          this.conversationList = res
+          
+        })
+      }
+      
 
     })
   }

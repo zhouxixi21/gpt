@@ -1,6 +1,27 @@
 <div class="container">
-  
-  <div class="conversation-container" [style]="collapseMenu? 'width: 100%': 'width: 100%'">
+  <ul nz-menu nzTheme="dark" style="width: 200px;background: #11181f !important;" nzMode="inline">
+    <li nz-submenu [nzOpen]="true" nzTitle="In Progress Bot List" *ngIf="inProgressList.length > 0">
+      <ul>
+        <li *ngFor="let inProgressItem of inProgressList" nz-menu-item [nzSelected]="selectedUser.name == inProgressItem.name" (click)="selectUser(inProgressItem)">
+          <span class="status" nz-icon *ngIf="inProgressItem.status == 'In Progress'" [nzType]="'loading'"></span>
+          <span class="status"  nz-icon nzType="check-circle" style="color: green;" *ngIf="inProgressItem.status == 'Online'"  nzTheme="fill"></span>
+          <span style="margin-left: 12px;">{{inProgressItem.name}}</span>
+        </li>
+
+      </ul>
+    </li>
+    <li nz-submenu (nzOpenChange)="openHistoryMenu($event)" [nzOpen]="inProgressList.length == 0 || historyMenuOpen" nzTitle="History Bot List"  *ngIf="inProgressList.length > 0">
+      <ul>
+        <li *ngFor="let completeItem of completeList" nz-menu-item [nzSelected]="selectedUser.name == completeItem.name" (click)="selectUser(completeItem)">
+          <span class="status" nz-icon *ngIf="completeItem.status == 'In Progress'" [nzType]="'loading'"></span>
+          <span class="status" nz-icon nzType="check-circle" style="color: green;" *ngIf="completeItem.status == 'Online'"  nzTheme="fill"></span>
+          <span style="margin-left: 12px;">{{completeItem.name}}</span>
+        </li>
+
+      </ul>
+    </li>
+  </ul>
+  <div class="conversation-container" style="width: calc(100% - 200px);">
     <div class="conversation-title">
       <div class="conversation-title-content">
         <button style="margin: auto 8px auto 0;border:none !important;padding-left:0px !important" nz-button nz-dropdown [nzDropdownMenu]="menu" *ngIf="completeList.length > 0 || inProgressList.length > 0">
@@ -16,7 +37,7 @@
             
           </ul>
         </nz-dropdown-menu>
-        <img src="assets/robot.svg">
+        <img *ngIf="selectedUser.name" src="assets/robot.svg">
         <div class="title">{{selectedUser.name}}</div>
         <span class="status" nz-icon *ngIf="selectedUser.status == 'In Progress'" [nzType]="'loading'"></span>
         <span class="status"  nz-icon nzType="check-circle" style="color: green;" *ngIf="selectedUser.status == 'Online'"  nzTheme="fill"></span>
@@ -30,7 +51,7 @@
       </div>
       
     </div>
-    <div class="conversation-content">
+    <div class="conversation-content" *ngIf="selectedUser.name">
       <div *ngFor="let conversation of conversationList;let conversationIndex = index" class="conversation-item">
         <div *ngIf="conversation.person == 'user'" class="conversation-item-container">
           <div class="conversation-item-logo">
@@ -91,7 +112,10 @@
         
       </div>
     </div>
-    <div class="answer-question">
+    <div class="conversation-content" style="display: flex;justify-content: center;align-items: center;" *ngIf="!selectedUser.name">
+      <span>For now No Bot selected!</span>
+    </div>
+    <div class="answer-question" *ngIf="selectedUser.name">
       <input nz-input (keyup.enter)="submit()" [(ngModel)]="answer" [disabled]="selectedUser.status == 'In Progress'" />
       <img style="width: 23px;margin-left: 16px;cursor: pointer;" *ngIf="selectedUser.status != 'In Progress'" (click)="submit()" src="assets/send.svg"/>
 
