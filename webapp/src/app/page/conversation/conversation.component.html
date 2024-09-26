@@ -1,5 +1,5 @@
 <div class="container">
-  <ul nz-menu nzTheme="dark" style="width: 200px;background: #11181f !important;" nzMode="inline">
+  <ul nz-menu nzTheme="dark" *ngIf="inProgressList.length > 0 || completeList.length > 0" style="width: 200px;background: #11181f !important;" nzMode="inline">
     <li nz-submenu [nzOpen]="true" nzTitle="In Progress Bot List" *ngIf="inProgressList.length > 0">
       <ul>
         <li *ngFor="let inProgressItem of inProgressList" nz-menu-item [nzSelected]="selectedUser.name == inProgressItem.name" (click)="selectUser(inProgressItem)">
@@ -21,7 +21,7 @@
       </ul>
     </li>
   </ul>
-  <div class="conversation-container" style="width: calc(100% - 200px);">
+  <div class="conversation-container" [style]="inProgressList.length > 0 || completeList.length > 0? 'width: calc(100% - 200px);': 'width:100%'">
     <div class="conversation-title">
       <div class="conversation-title-content">
         <button style="margin: auto 8px auto 0;border:none !important;padding-left:0px !important" nz-button nz-dropdown [nzDropdownMenu]="menu" *ngIf="completeList.length > 0 || inProgressList.length > 0">
