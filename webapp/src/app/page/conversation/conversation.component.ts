@@ -45,6 +45,7 @@ export class ConversationComponent implements OnInit{
   }
   async loadIssue(){
     let res = await this.gptService.getIssueList()
+    console.log(res)
     if(res.length == 0){
       this.getIssueStatus = false
     } else {
@@ -57,15 +58,11 @@ export class ConversationComponent implements OnInit{
         let issue  = res[index].title
         let repo = res[index].repo
         let path = res[index].path
-        if(this.selectedUser.status == 'Online'){
-          id = this.selectedUser.id
-          name = this.selectedUser.name
-          this.gptService.sendMessage(answer,issue,repo, path).then(data=>{
-            this.message.success('Github issue has assign to ' + name + '!').onClose.subscribe(item=>{
-              this.loadData(this.selectId)
-            })
+        this.gptService.sendMessage(answer,issue,repo, path).then(data=>{
+          this.message.success('Github issue has assigned!').onClose.subscribe(item=>{
+            this.loadData(this.selectId)
           })
-        }
+        })
         
       }
       

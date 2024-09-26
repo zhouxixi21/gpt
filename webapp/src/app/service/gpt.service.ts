@@ -302,7 +302,7 @@ export class GPTService {
     })
   }
   async sendMessage(message: string, issue: string, repo: string, path:string){
-    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{message: message, issue: issue, repo: repo}).toPromise()
+    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{message: message, issue: issue, repo: repo,path: path}).toPromise()
     return new Promise((resolve, reject) => {
       resolve(res.data)
     })
