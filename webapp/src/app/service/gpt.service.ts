@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { IISSUE, IPROCESS, IPROCESSDETAIL, IROBOT, ISHOWQUESTION } from "../common/common.interface";
+import { IISSUE, IMESSAGE, IPROCESS, IPROCESSDETAIL, IROBOT, ISHOWQUESTION } from "../common/common.interface";
 import { HttpClient } from "@angular/common/http";
 import { GET_ISSUE_URL, GET_NODE_URL, NODE_DETAIL_URL, NODE_LIST_URL, SEND_MESSAGE_URL } from "./apis.constant";
 
@@ -301,8 +301,8 @@ export class GPTService {
       resolve(res.data)
     })
   }
-  async sendMessage(message: string, issue: string, repo: string, path:string){
-    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,{message: message, issue: issue, repo: repo,path: path}).toPromise()
+  async sendMessage(messageList: IMESSAGE[]){
+    let res:any = await this.httpClient.post(SEND_MESSAGE_URL,messageList).toPromise()
     return new Promise((resolve, reject) => {
       resolve(res.data)
     })

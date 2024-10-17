@@ -14,6 +14,9 @@ export interface IISSUE{
   repo: string;
   path: string;
 }
+export interface IMESSAGE{
+  message: string, issue: string, repo: string, path:string 
+}
 export interface IROBOT{
   id: string;
   name: string;

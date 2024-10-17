@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { IISSUE, IROBOT, ISHOWQUESTION, ISHOWROBOT, ISHOWTASK } from 'src/app/common/common.interface';
+import { IISSUE, IMESSAGE, IROBOT, ISHOWQUESTION, ISHOWROBOT, ISHOWTASK } from 'src/app/common/common.interface';
 import { GPTService } from 'src/app/service/gpt.service';
 import { StorageService } from 'src/app/service/storage.service';
 
@@ -51,6 +51,7 @@ export class ConversationComponent implements OnInit{
     } else {
       this.getIssueStatus = true
       this.issueList = res
+      let messageList: IMESSAGE[] = []
       for (let index = 0; index < res.length; index++) {
         let id = ''
         let name = ''
@@ -58,14 +59,19 @@ export class ConversationComponent implements OnInit{
         let issue  = res[index].title
         let repo = res[index].repo
         let path = res[index].path
-        this.gptService.sendMessage(answer,issue,repo, path).then(data=>{
-          this.message.success('Github issue has assigned!').onClose.subscribe(item=>{
-            this.loadData(this.selectId)
-          })
+        messageList.push({
+          message: answer,
+          issue: issue,
+          repo: repo,
+          path: path
         })
         
       }
-      
+      this.gptService.sendMessage(messageList).then(data=>{
+        this.message.success('Github issue has assigned!').onClose.subscribe(item=>{
+          this.loadData(this.selectId)
+        })
+      })
     }
     
   }
@@ -274,7 +280,14 @@ export class ConversationComponent implements OnInit{
   }
   submit(){
     if(this.answer && this.selectedUser.status != 'In Progress'){
-      this.gptService.sendMessage(this.answer,this.answer, '', '').then(data=>{
+      let messageList: IMESSAGE[] = []
+      messageList.push({
+        message: this.answer,
+        issue: this.answer,
+        repo: '',
+        path: ''
+      })
+      this.gptService.sendMessage(messageList).then(data=>{
         this.message.success('Send Message Successfully!').onClose.subscribe(item=>{
           this.answer = ''
           this.loadData(this.selectId)

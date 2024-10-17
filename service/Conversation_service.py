@@ -5,23 +5,27 @@ import requests
 from constant.Path_constant import Path_constant
 
 
-def send_email(message, issue, repo, path):
-
-    message_id = str(uuid.uuid1())
+def send_email(message_list):
     file_path = Path_constant.NODE_CONVERSATION_FILE_PATH
+
     if os.path.exists(file_path):
         with open(Path_constant.NODE_CONVERSATION_FILE_PATH, 'r') as f:
             content = json.load(f)
             f.close()
     else:
         content = []
-    content.append({
-        "id": message_id,
-        "content": message,
-        "issue": issue,
-        "repo": repo,
-        "path": path
-    })
+    for messageItem in message_list:
+        print(messageItem)
+        message_id = str(uuid.uuid1())
+
+        content.append({
+            "id": message_id,
+            "content": messageItem['message'],
+            "issue": messageItem['issue'],
+            "repo": messageItem['repo'],
+            "path": messageItem['path']
+        })
+    print(content)
     # TO DO
     # call api for gpt
     with open(file_path, "w") as file:

@@ -10,7 +10,7 @@
 
       </ul>
     </li>
-    <li nz-submenu (nzOpenChange)="openHistoryMenu($event)" [nzOpen]="inProgressList.length == 0 || historyMenuOpen" nzTitle="History Bot List"  *ngIf="inProgressList.length > 0">
+    <li nz-submenu (nzOpenChange)="openHistoryMenu($event)" [nzOpen]="inProgressList.length == 0 || historyMenuOpen" nzTitle="History Bot List"  *ngIf="completeList.length > 0">
       <ul>
         <li *ngFor="let completeItem of completeList" nz-menu-item [nzSelected]="selectedUser.name == completeItem.name" (click)="selectUser(completeItem)">
           <span class="status" nz-icon *ngIf="completeItem.status == 'In Progress'" [nzType]="'loading'"></span>
@@ -24,19 +24,7 @@
   <div class="conversation-container" [style]="inProgressList.length > 0 || completeList.length > 0? 'width: calc(100% - 200px);': 'width:100%'">
     <div class="conversation-title">
       <div class="conversation-title-content">
-        <button style="margin: auto 8px auto 0;border:none !important;padding-left:0px !important" nz-button nz-dropdown [nzDropdownMenu]="menu" *ngIf="completeList.length > 0 || inProgressList.length > 0">
-          <span nz-icon nzType="menu" nzTheme="outline"></span>
-        </button>
-        <nz-dropdown-menu #menu="nzDropdownMenu">
-          <ul nz-submenu nzTitle="Completed List">
-            <li nz-menu-item (click)="selectUser(completeItem)" *ngFor="let completeItem of completeList">{{completeItem.name}}</li>
-            
-          </ul>
-          <ul nz-submenu nzTitle="In Progress List" *ngIf="inProgressList.length > 0">
-            <li nz-menu-item (click)="selectUser(inProgressItem)" *ngFor="let inProgressItem of inProgressList">{{inProgressItem.name}}</li>
-            
-          </ul>
-        </nz-dropdown-menu>
+        
         <img *ngIf="selectedUser.name" src="assets/robot.svg">
         <div class="title">{{selectedUser.name}}</div>
         <span class="status" nz-icon *ngIf="selectedUser.status == 'In Progress'" [nzType]="'loading'"></span>
