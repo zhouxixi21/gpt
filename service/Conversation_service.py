@@ -35,5 +35,5 @@ def send_email(message_list):
         with open(file_path, "w") as file:
             json.dump(content, file, indent=4)
             file.close()
-        thread = threading.Thread(target=request_develop, args=(json.dumps(content[len(content) - 1], )))
+        thread = threading.Thread(target=request_develop, args=(json.dumps(content[len(content) - 1]),))
         thread.start()
