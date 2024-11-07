@@ -25,10 +25,10 @@ def send_email(message_list):
             "repo": messageItem['repo'],
             "path": messageItem['path']
         })
-    print(content)
-    # TO DO
-    # call api for gpt
-    with open(file_path, "w") as file:
-        json.dump(content, file, indent=4)
-        file.close()
-    requests.post('http://localhost:8000/develop', json.dumps(content[len(content)-1]))
+        print(content)
+        # TO DO
+        # call api for gpt
+        with open(file_path, "w") as file:
+            json.dump(content, file, indent=4)
+            file.close()
+        requests.post('http://localhost:8000/develop', json.dumps(content[len(content)-1]))
