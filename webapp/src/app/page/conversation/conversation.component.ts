@@ -67,6 +67,7 @@ export class ConversationComponent implements OnInit{
         })
         
       }
+      console.log(messageList)
       this.gptService.sendMessage(messageList).then(data=>{
         this.message.success('Github issue has assigned!').onClose.subscribe(item=>{
           this.loadData(this.selectId)
