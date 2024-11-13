@@ -33,7 +33,7 @@
     <div class="conversation-title">
       <div class="conversation-title-content">
         
-        <img *ngIf="selectedUser.name" src="assets/roAgent.svg">
+        <img *ngIf="selectedUser.name" src="assets/robot.svg">
         <div class="title">{{selectedUser.name}}</div>
         <span class="status" nz-icon *ngIf="selectedUser.status == 'In Progress'" [nzType]="'loading'"></span>
         <span class="status"  nz-icon nzType="check-circle" style="color: green;" *ngIf="selectedUser.status == 'Online'"  nzTheme="fill"></span>
