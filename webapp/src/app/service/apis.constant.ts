@@ -1,4 +1,4 @@
-export const BASE_URL = 'apis/'
+export const BASE_URL = 'http://localhost:8020/apis/'
 export const NODE_BASE_URL = BASE_URL + 'node/'
 export const NODE_DETAIL_URL = NODE_BASE_URL + 'detail'
 export const NODE_LIST_URL = NODE_BASE_URL + 'list'

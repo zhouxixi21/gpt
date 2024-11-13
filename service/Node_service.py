@@ -182,7 +182,7 @@ def get_number():
 
             node_list.append({
                 'id': content_item['id'],
-                'name': 'Bot' + str(index),
+                'name': 'Agent ' + str(index),
                 'status': status,
                 'lastMessage': last_message
             })
