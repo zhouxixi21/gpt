@@ -8,7 +8,7 @@
 <div class="container">
 
   <ul nz-menu nzTheme="dark" style="width: 200px;background: #11181f !important;" nzMode="inline">
-    <li nz-submenu [nzOpen]="inProgressList.length > 0" nzTitle="In Progress Agent List" *ngIf="inProgressList.length > 0 || completeList.length == 0">
+    <li nz-submenu [nzOpen]="inProgressList.length > 0" nzTitle="In Progress Agent List" >
       <ul>
         <li *ngFor="let inProgressItem of inProgressList" nz-menu-item [nzSelected]="selectedUser.name == inProgressItem.name" (click)="selectUser(inProgressItem)">
           <span class="status" nz-icon *ngIf="inProgressItem.status == 'In Progress'" [nzType]="'loading'"></span>
@@ -18,7 +18,7 @@
 
       </ul>
     </li>
-    <li nz-submenu (nzOpenChange)="openHistoryMenu($event)" [nzOpen]="inProgressList.length == 0 || historyMenuOpen" nzTitle="History Agent List"  *ngIf="completeList.length > 0">
+    <li nz-submenu (nzOpenChange)="openHistoryMenu($event)" [nzOpen]="completeList.length  > 0 || historyMenuOpen" nzTitle="History Agent List">
       <ul>
         <li *ngFor="let completeItem of completeList" nz-menu-item [nzSelected]="selectedUser.name == completeItem.name" (click)="selectUser(completeItem)">
           <span class="status" nz-icon *ngIf="completeItem.status == 'In Progress'" [nzType]="'loading'"></span>
