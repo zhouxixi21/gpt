@@ -106,7 +106,7 @@
       </div>
     </div>
     <div class="conversation-content" style="display: flex;justify-content: center;align-items: center;" *ngIf="!selectedUser.name">
-      <span>For now No Agent selected!</span>
+      <span>No agent selected</span>
     </div>
     <div class="answer-question" *ngIf="selectedUser.name">
       <input nz-input (keyup.enter)="submit()" [(ngModel)]="answer" [disabled]="selectedUser.status == 'In Progress'" />
